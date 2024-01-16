@@ -1,0 +1,96 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif; /* Example font */
+}
+
+/* Site Header */
+.site-header {
+  background: #dcdcdc; /* Light grey */
+  padding: 20px;
+  text-align: center;
+  height: 10vh; /* Header height */
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Section Styles */
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh; /* Adjusts to 90% of the viewport height */
+  width: 100%;
+  padding: 20px;
+}
+
+/* Landing Section */
+.landing {
+  background: #ffe5e5; /* Light red */
+  padding-top: 10vh;
+}
+
+/* Services Section */
+.services {
+  background: #e5ffe5; /* Light green */
+}
+
+/* Lieu Section */
+.lieu {
+  background: #e5f0ff; /* Light blue */
+  min-height: 70vh;
+}
+
+/* Image Sections */
+.image-sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  min-height: 33vh; /* Third of the viewport height */
+  background: #fff0e5; /* Light orange */
+}
+
+/* Carte Section */
+.carte {
+  background: #f0e5ff; /* Light purple */
+}
+
+/* Comments Section */
+.comments {
+  background: #e5fff0; /* Light mint */
+  min-height: 60vh; /* Half of the viewport height */
+}
+
+/* Footer Styles */
+.site-footer {
+  background: #333333; /* Dark grey */
+  color: white;
+  min-height: 30vh; /* The other half of the viewport height */
+}
+
+/* Responsive Grid Layout for smaller screens */
+@media (max-width: 768px) {
+  .image-sections {
+    grid-template-columns: repeat(1, 1fr); /* Stacks the images vertically */
+  }
+
+  /* Adjust sections to auto height for smaller screens */
+  .landing,
+  .services,
+  .lieu,
+  .carte,
+  .comments,
+  .site-footer {
+    min-height: auto;
+  }
+}
