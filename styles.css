@@ -8,6 +8,7 @@
 body,
 html {
   font-family: "Arial", sans-serif;
+  font-size: 16px;
 }
 
 /* --------------HEADER----------------- */
@@ -20,7 +21,8 @@ html {
   display: flex; /* Changed to flex layout */
   justify-content: space-between; /* Distributes space between logo and navigation */
   align-items: center;
-  height: 10vh; /* Set a specific height for the header */
+  height: 5rem; /* Set a specific height for the header */
+  min-height: 3rem;
 }
 /* Assign to the grid area */
 .logo {
@@ -81,10 +83,12 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
-  max-height: 90vh;
   width: 100%;
   padding: 20px;
+  height: 50rem;
+  min-height: 46rem; /* Converted from 90vh assuming 900px height */
+  max-height: 54em;
+  padding: 1.25rem; /* Example padding in rem */
 }
 
 /* --------------Landing Section-------------- */
@@ -92,7 +96,8 @@ section {
   display: grid;
   grid-template-columns: 10vw 40vw 30vw 20vw; /* Define the grid layout with two columns */
   background: #ffe5e5; /* Light red */
-  min-height: 80vh;
+  min-height: 40rem;
+  height: 45rem;
 }
 
 /* Parent container of the image */
@@ -125,10 +130,9 @@ section {
 }
 
 .landing-child-30 h2 {
-  margin: 0 0 20px 0; /* Add some space below the title */
-  margin-bottom: 30px;
-  /* Additional styling for the title */
-}
+	margin: 0 0 1.25rem 0;
+	font-size: 1.5rem; /* Example font size in rem */
+  }
 
 .landing-child-30 p {
   margin: 0 0 20px 0; /* Add some space below each paragraph */
@@ -152,37 +156,41 @@ section {
   grid-template-rows: repeat(22, 1fr); /* 21 rows of equal size */
   grid-gap: 0px; /* Space between grid items */
   padding: 0px; /* Padding around the entire section */
+  height: 60rem;
 }
 
 /* Assigning names to grid areas for easier placement */
 .services-section {
-  grid-template-areas:
-    "blank1 blank1 blank1 blank1 blank1 blank1 blank1 blank1 card1  card1  blank2 blank2 blank2 blank2 blank2"
-    "blank3 light1 light1 light1 light1 light1 light1 light1 card1  card1  light2 light3 light3 light4 blank4"
-    "blank3 light1 light1 light1 light1 light1 light1 light1 card1  card1  light2 card4  card4  light4 blank4"
-    "cleft  main1  main1  main1  main1  main1  main1  main1  card1  card1  main9  card4  card4  mainc  cright"
-    "cleft  main1  main1  main1  main1  main1  main1  main1  card1  card1  main9  card4  card4  mainc  cright"
-    "cleft  main2  head   head   head   head   head   main4  card1  card1  main9  card4  card4  mainc  cright"
-    "cleft  main2  head   head   head   head   head   main4  main7  main7  main9  card4  card4  mainc  cright"
-    "cleft  main2  main3  main3  main3  main3  main3  main4  card2  card2  main9  card4  card4  mainc  cright"
-    "cleft  main2  main3  main3  main3  main3  main3  main4  card2  card2  main9  maina  maina  mainc  cright"
-    "cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
-    "cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
-    "cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
-    "cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
-    "cleft  main2  text   text   text   text   text   main4  main8  main8  main9  card5  card5  mainc  cright"
-    "cleft  main2  text   text   text   text   text   main4  card3  card3  main9  card5  card5  mainc  cright"
-    "cleft  main2  main5  main5  main6  main6  main6  main6  card3  card3  main9  mainb  mainb  mainc  cright"
-    "cleft  main2  btton  btton  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
-    "cleft  main2  btton  btton  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
-    "cleft  main2  maind  maind  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
-    "blank5 light5 light5 light5 light5 light5 light5 light5 card3  card3  light7 card6  card6  light8 blank6"
-    "blank5 light5 light5 light5 light5 light5 light5 light5 light6 light6 light7 card6  card6  light8 blank6"
-    "blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 card6  card6  blank8 blank8";
+  grid-template-areas:  "blank1 blank1 blank1 blank1 blank1 blank1 blank1 blank1 card1  card1  blank2 blank2 blank2 blank2 blank2"
+						"blank3 light1 light1 light1 light1 light1 light1 light1 card1  card1  light2 light3 light3 light4 blank4"
+						"blank3 light1 light1 light1 light1 light1 light1 light1 card1  card1  light2 card4  card4  light4 blank4"
+						"cleft  main1  main1  main1  main1  main1  main1  main1  card1  card1  main9  card4  card4  mainc  cright"
+						"cleft  main1  main1  main1  main1  main1  main1  main1  card1  card1  main9  card4  card4  mainc  cright"
+						"cleft  main2  head   head   head   head   head   main4  card1  card1  main9  card4  card4  mainc  cright"
+						"cleft  main2  head   head   head   head   head   main4  main7  main7  main9  card4  card4  mainc  cright"
+						"cleft  main2  main3  main3  main3  main3  main3  main4  card2  card2  main9  card4  card4  mainc  cright"
+						"cleft  main2  main3  main3  main3  main3  main3  main4  card2  card2  main9  maina  maina  mainc  cright"
+						"cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
+						"cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
+						"cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
+						"cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
+						"cleft  main2  text   text   text   text   text   main4  main8  main8  main9  card5  card5  mainc  cright"
+						"cleft  main2  text   text   text   text   text   main4  card3  card3  main9  card5  card5  mainc  cright"
+						"cleft  main2  main5  main5  main6  main6  main6  main6  card3  card3  main9  mainb  mainb  mainc  cright"
+						"cleft  main2  btton  btton  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
+						"cleft  main2  btton  btton  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
+						"cleft  main2  maind  maind  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
+						"blank5 light5 light5 light5 light5 light5 light5 light5 card3  card3  light7 card6  card6  light8 blank6"
+						"blank5 light5 light5 light5 light5 light5 light5 light5 light6 light6 light7 card6  card6  light8 blank6"
+						"blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 card6  card6  blank8 blank8";
 }
 
-.blank1, .blank2, .blank3, .blank4, .blank5, .blank6, .blank7, .blank8 {
+.blank1, .blank2, .blank3, .blank4 {
 	background-color: #ffe5e5;
+	height: 100%;
+}
+.blank5, .blank6, .blank7, .blank8 {
+	background-color: #e5f0ff;
 	height: 100%;
 }
 .blank1 {grid-area: blank1;}
@@ -297,7 +305,7 @@ section {
 /* --------------Lieu Section-------------- */
 .lieu {
   background: #e5f0ff; /* Light blue */
-  min-height: 70vh;
+  min-height: 45rem;
 }
 
 /* --------------Image Sections-------------- */
@@ -305,7 +313,7 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  min-height: 33vh; /* Third of the viewport height */
+  min-height: 22rem; /* Third of the viewport height */
   background: #fff0e5; /* Light orange */
 }
 
@@ -317,20 +325,21 @@ section {
 /* --------------Comments Section-------------- */
 .comments {
   background: #e5fff0; /* Light mint */
-  min-height: 60vh; /* Half of the viewport height */
+  min-height: 37.5rem; /* Half of the viewport height */
 }
 
 /* --------------Footer Styles-------------- */
 .site-footer {
   background: #333333; /* Dark grey */
   color: white;
-  min-height: 30vh; /* The other half of the viewport height */
+  min-height: 20rem; /* The other half of the viewport height */
 }
 
 /* --------------Responsive Grid Layout for smaller screens-------------- */
 @media (max-width: 768px) {
   .image-sections {
-    grid-template-columns: repeat(1, 1fr); /* Stacks the images vertically */
+    grid-template-columns: repeat(1, 1fr);
+	font-size: 14px;
   }
 
   /* Adjust sections to auto height for smaller screens
