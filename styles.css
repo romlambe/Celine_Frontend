@@ -76,7 +76,7 @@ html {
   justify-content: flex-end;
 }
 
-/* --------------MAIN SECTION-----------------
+/* --------------MAIN SECTION----------------- */
 section {
   display: flex;
   align-items: center;
@@ -85,7 +85,7 @@ section {
   max-height: 90vh;
   width: 100%;
   padding: 20px;
-} */
+}
 
 /* --------------Landing Section-------------- */
 .landing {
@@ -95,27 +95,32 @@ section {
   min-height: 80vh;
 }
 
-/* Child Classes */
+/* Parent container of the image */
 .landing-child-40 {
-  grid-column: 2 / 3; /* This child occupies the first column */
-  display: flex; /* Use flexbox for positioning its children */
-  justify-content: center; /* Center children horizontally */
-  align-items: center; /* Center children vertically */
-  overflow: visible;
-}
+	grid-column: 2 / 3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: visible;
+	position: relative; /* Position relative to allow absolute positioning inside */
+  }
 
-/* width commented out to make the image bigger */
-.landing-child-40 img {
-  height: auto;
-  width: 150%;
-  max-width: 150%;
-}
+  /* Image styling */
+  .landing-child-40 img {
+	position: absolute; /* Take it out of the normal flow */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* Center the image */
+	width: 70%;
+	height: auto;
+	object-fit: cover; /* This decides how the image fits into the box, cover keeps aspect ratio */
+  }
 
 .landing-child-30 {
   display: flex;
   flex-direction: column; /* Stack children vertically */
   justify-content: flex-start; /* Align content to the start of the main axis */
-  align-items: flex-start; /* Align items to the start of the cross axis (left edge) */
+  align-items: flex-start; /* Align items to the start of the cross axis (lemainft edge) */
   padding: 20px; /* Add padding inside the container */
 }
 
@@ -138,22 +143,12 @@ section {
 }
 
 /* --------------Services Section-------------- */
-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 90vh;
-  max-height: 90vh;
-  width: 100%;
-  padding: 20px;
-}
-
 .services-section {
   width: auto;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(15, 1fr); /* 15 columns of equal size */
-  /*grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr; */
+  /*grid-template-columns: repeat(15, 1fr); /* 15 columns of equal size */
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
   grid-template-rows: repeat(22, 1fr); /* 21 rows of equal size */
   grid-gap: 0px; /* Space between grid items */
   padding: 0px; /* Padding around the entire section */
@@ -187,7 +182,7 @@ section {
 }
 
 .blank1, .blank2, .blank3, .blank4, .blank5, .blank6, .blank7, .blank8 {
-	background-color: #dbeb05;
+	background-color: #ffe5e5;
 	height: 100%;
 }
 .blank1 {grid-area: blank1;}
