@@ -1,0 +1,70 @@
+/* Assigning names to grid areas for easier placement */
+.services-section {
+  grid-template-areas:
+    "blank1 blank1 blank1 blank1 blank1 blank1 blank1 blank1 card1  card1  blank2 blank2 blank2 blank2 blank2"
+    "blank3 light1 light1 light1 light1 light1 light1 light1 card1  card1  light2 light3 light3 light4 blank4"
+    "blank3 light1 light1 light1 light1 light1 light1 light1 card1  card1  light2 card4  card4  light4 blank4"
+    "cleft  main1  main1  main1  main1  main1  main1  main1  card1  card1  main9  card4  card4  mainc  cright"
+    "cleft  main1  main1  main1  main1  main1  main1  main1  card1  card1  main9  card4  card4  mainc  cright"
+    "cleft  main2  head   head   head   head   head   main4  card1  card1  main9  card4  card4  mainc  cright"
+    "cleft  main2  head   head   head   head   head   main4  main7  main7  main9  card4  card4  mainc  cright"
+    "cleft  main2  main3  main3  main3  main3  main3  main4  card2  card2  main9  card4  card4  mainc  cright"
+    "cleft  main2  main3  main3  main3  main3  main3  main4  card2  card2  main9  maina  maina  mainc  cright"
+    "cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
+    "cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
+    "cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
+    "cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
+    "cleft  main2  text   text   text   text   text   main4  main8  main8  main9  card5  card5  mainc  cright"
+    "cleft  main2  text   text   text   text   text   main4  card3  card3  main9  card5  card5  mainc  cright"
+    "cleft  main2  main5  main5  main6  main6  main6  main6  card3  card3  main9  mainb  mainb  mainc  cright"
+    "cleft  main2  btton  btton  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
+    "cleft  main2  btton  btton  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
+    "cleft  main2  maind  maind  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
+    "blank5 light5 light5 light5 light5 light5 light5 light5 card3  card3  light7 card6  card6  light8 blank6"
+    "blank5 light5 light5 light5 light5 light5 light5 light5 light6 light6 light7 card6  card6  light8 blank6"
+    "blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 card6  card6  blank8 blank8";
+}
+
+.blank1, .blank2, .blank3, .blank4, .blank5, .blank6, .blank7, .blank8 {
+	background-color: #dbeb05;
+	height: 100%;
+}
+.blank1 {grid-area: blank1;}
+.blank2 {grid-area: blank2;}
+.blank3 {grid-area: blank3;}
+.blank4 {grid-area: blank4;}
+.blank5 {grid-area: blank5;}
+.blank6 {grid-area: blank6;}
+.blank7 {grid-area: blank7;}
+.blank8 {grid-area: blank8;}
+
+.light1, .light2, .light3, .light4, .light5, .light6, .light7, .light8 {
+	background-color: #45ac45;
+	height: 100%;
+}
+.light1 {grid-area: light1;}
+.light2 {grid-area: light2;}
+.light3 {grid-area: light3;}
+.light4 {grid-area: light4;}
+.light5 {grid-area: light5;}
+.light6 {grid-area: light6;}
+.light7 {grid-area: light7;}
+.light8 {grid-area: light8;}
+
+.bg-main1, .bg-main2, .bg-main3, .bg-main4, .bg-main5, .bg-main6, .bg-main7, .bg-main8, .bg-main9, .bg-maina, .bg-mainb, .bg-mainc, .bg-maind {
+  background-color: #ad1071;
+  height: 100%;
+}
+.bg-main1 {grid-area: main1;}
+.bg-main2 {grid-area: main2;}
+.bg-main3 {grid-area: main3;}
+.bg-main4 {grid-area: main4;}
+.bg-main5 {grid-area: main5;}
+.bg-main6 {grid-area: main6;}
+.bg-main7 {grid-area: main7;}
+.bg-main8 {grid-area: main8;}
+.bg-main9 {grid-area: main9;}
+.bg-maina {grid-area: maina;}
+.bg-mainb {grid-area: mainb;}
+.bg-mainc {grid-area: mainc;}
+.bg-maind {grid-area: maind;}

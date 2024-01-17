@@ -106,9 +106,9 @@ section {
 
 /* width commented out to make the image bigger */
 .landing-child-40 img {
-	height: auto;
-	width: 150%;
-	max-width: 150%;
+  height: auto;
+  width: 150%;
+  max-width: 150%;
 }
 
 .landing-child-30 {
@@ -139,18 +139,18 @@ section {
 
 /* --------------Services Section-------------- */
 section {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 90vh;
-	max-height: 90vh;
-	width: 100%;
-	padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  max-height: 90vh;
+  width: 100%;
+  padding: 20px;
 }
 
 .services-section {
-	width: auto;
-	height: auto;
+  width: auto;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(15, 1fr); /* 15 columns of equal size */
   /*grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr; */
