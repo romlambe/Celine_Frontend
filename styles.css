@@ -62,7 +62,7 @@ html {
   text-decoration: none;
   background: none; /* Removes background from buttons */
   border: none; /* Removes border from buttons */
-  color: #000; /* Text color for navigation items */
+  color: #000; /* Text main  for navigation items */
   font-weight: bold; /* Makes the navigation items bold */
   cursor: pointer; /* Changes cursor to pointer when hovering over the items */
   line-height: 1; /* Adjust line height to ensure vertical centering */
@@ -83,6 +83,7 @@ section {
   align-items: center;
   justify-content: center;
   min-height: 90vh;
+  max-height: 90vh;
   width: 100%;
   padding: 20px;
 }
@@ -103,12 +104,13 @@ section {
   align-items: center; /* Center children vertically */
 }
 
+/* width commented out to make the image bigger */
 .landing-child-40 img {
-  width: auto; /* Make the image responsive by setting its width to 100% of the parent */
-  height: 30vw; /* Maintain the aspect ratio of the image */
+  /*width: auto; /* Make the image responsive by setting its width to 100% of the parent */
+  height: 70vh; /* Maintain the aspect ratio of the image */
 }
 
-.landing-child-50 {
+.landing-child-30 {
 	display: flex;
 	flex-direction: column; /* Stack children vertically */
 	justify-content: flex-start; /* Align content to the start of the main axis */
@@ -116,28 +118,106 @@ section {
 	padding: 20px; /* Add padding inside the container */
   }
 
-  .landing-child-50 h2 {
+  .landing-child-30 h2 {
 	margin: 0 0 20px 0; /* Add some space below the title */
 	margin-bottom: 30px;
 	/* Additional styling for the title */
   }
 
-  .landing-child-50 p {
+  .landing-child-30 p {
 	margin: 0 0 20px 0; /* Add some space below each paragraph */
 	margin-bottom: 30px;
 	/* Additional styling for paragraphs */
   }
 
-  .landing-child-50 .centered-text {
+  .landing-child-30 .centered-text {
 	align-self: center; /* Center this text within the flex container */
 	margin-top: auto; /* Push the centered text to the bottom */
 	/* Additional styling for the centered text */
   }
 
 /* --------------Services Section-------------- */
-.services {
-  background: #e5ffe5; /* Light green */
-}
+.services-section {
+	background: #e5ffe5; /* Light green */
+	display: grid;
+	grid-template-columns: repeat(15, 1fr); /* 15 columns of equal size */
+	grid-template-rows: repeat(21, 1fr); /* 21 rows of equal size */
+	grid-gap: 20px; /* Space between grid items */
+	padding: 20px; /* Padding around the entire section */
+  }
+
+/* Assigning names to grid areas for easier placement */
+.services-section {
+	grid-template-areas:
+	  "blank blank blank blank blank blank blank blank card1 card1 blank blank blank blank blank"
+	  "blank light light light light light light light card1 card1 light light light light blank"
+	  "blank light light light light light light light card1 card1 light card4 card4 light blank"
+	  "cleft main  main  main  main  main  main  main  card1 card1 main  card4 card4 main  cleft"
+	  "cleft main  main  main  main  main  main  main  card1 card1 main  card4 card4 main  cleft"
+	  "cleft main  head  head  head  head  head  main  card1 card1 main  card4 card4 main  cleft"
+	  "cleft main  head  head  head  head  head  main  main  main  main  card4 card4 main  cleft"
+	  "cleft main  main  main  main  main  main  main  card2 card2 main  card4 card4 main  cleft"
+	  "cleft main  main  main  main  main  main  main  card2 card2 main  main  main  main  cleft"
+	  "cleft main  text  text  text  text  text  main  card2 card2 main  card5 card5 main  cleft"
+	  "cleft main  text  text  text  text  text  main  card2 card2 main  card5 card5 main  cleft"
+	  "cleft main  text  text  text  text  text  main  card2 card2 main  card5 card5 main  cleft"
+	  "cleft main  text  text  text  text  text  main  card2 card2 main  card5 card5 main  cleft"
+	  "cleft main  text  text  text  text  text  main  main  main  main  card5 card5 main  cleft"
+	  "cleft main  text  text  text  text  text  main  card3 card3 main  card5 card5 main  cleft"
+	  "cleft main  main  main  main  main  main  main  card3 card3 main  main  main  main  cleft"
+	  "cleft main  btton btton main  main  main  main  card3 card3 main  card6 card6 main  cleft"
+	  "cleft main  btton btton main  main  main  main  card3 card3 main  card6 card6 main  cleft"
+	  "cleft main  main  main  main  main  main  main  card3 card3 main  card6 card6 main  cleft"
+	  "blank light light light light light light light card3 card3 light card6 card6 light blank"
+	  "blank light light light light light light light light light light card6 card6 light blank"
+	  "blank blank blank blank blank blank blank blank blank blank blank card6 card6 blank blank"
+	  /* ...repeat for the remaining rows */
+  }
+
+  .service-header {
+	grid-area: header;
+  }
+
+  .service-main {
+	/* Assign to the grid area */
+  }
+
+  .service-button {
+	/* Assign to the grid area */
+	display: flex; /* For centering content inside the button container */
+	justify-content: center; /* Center the button horizontally */
+	align-items: center; /* Center the button vertically */
+  }
+
+  .service-button button {
+	padding: 10px 20px; /* Padding inside the button */
+	border: none; /* Remove default border */
+	background-color: #f8f8f8; /* Background main  of the button */
+	cursor: pointer; /* Cursor to indicate button is clickable */
+	/* Style the button text */
+  }
+
+  /* You can repeat the similar style for all service cards, or customize each one. */
+  .service-card {
+	/* Assign to the grid area */
+	display: flex; /* To align the content inside the cards */
+	justify-content: center; /* Horizontally center the content */
+	align-items: center; /* Vertically center the content */
+	/* Style the service cards */
+  }
+
+  .service-card1 {
+	/* Specific styles or grid area assignment */
+  }
+
+  .service-card2 {
+	/* Specific styles or grid area assignment */
+  }
+
+  .service-card3 { /* Specific styles or grid area assignment */ }
+  .service-card4 { /* Specific styles or grid area assignment */ }
+  .service-card5 { /* Specific styles or grid area assignment */ }
+  .service-card6 { /* Specific styles or grid area assignment */ }
 
 /* --------------Lieu Section-------------- */
 .lieu {
