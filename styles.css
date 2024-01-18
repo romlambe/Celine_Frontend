@@ -369,20 +369,23 @@ section {
 	height: auto; /* Maintain the aspect ratio */
   }
 
-  /* Media query for smaller screens */
 /* Media query for smaller screens */
 @media (max-width: 768px) {
 	.image-sections {
 	  grid-template-columns: 1fr; /* One column for vertical stacking */
 	  text-align: center; /* Center the content for all children */
+	  padding-top: 20px; /* Add padding at the top of the container */
+	  padding-bottom: 20px; /* Add padding at the bottom of the container */
 	}
 
 	.image-section img {
-	  max-width: 80%; /* Maintain the max width */
+	  max-width: 70%; /* Maintain the max width */
 	  height: auto; /* Maintain aspect ratio */
-	  display: inline-block; /* Change display to inline-block for text-align to work */
+	  display: block; /* Block display for images */
 	  margin-left: auto; /* Center-align for block-level elements */
 	  margin-right: auto; /* Center-align for block-level elements */
+	  margin-top: 10px; /* Add space at the top of the image */
+	  margin-bottom: 10px; /* Add space at the bottom of the image */
 	}
   }
 
@@ -393,9 +396,89 @@ section {
 
 /* --------------Comments Section-------------- */
 .comments {
-  background: #e5fff0; /* Light mint */
-  min-height: 37.5rem; /* Half of the viewport height */
-}
+	display: grid;
+	grid-template-rows: 1fr 3fr 1fr; /* Allocate space for title, carousel, and dots */
+	background: #e5fff0; /* Light mint */
+	min-height: 37.5rem; /* Half of the viewport height */
+	padding: 20px; /* Add some padding */
+  }
+
+  .carousel-title {
+	grid-row: 1; /* Place title in the first row */
+	text-align: center; /* Center the title */
+	/* Add more styling as needed */
+  }
+
+  .carousel-container {
+	grid-row: 2; /* Place carousel in the second row */
+	position: relative;
+	overflow: hidden; /* Hide overflow */
+	display: flex; /* Add flex display to the container */
+	flex-wrap: nowrap; /* Prevent wrapping of items */
+	width: 100%;
+  }
+
+  .carousel-item {
+	display: none; /* Hide all slides by default */
+	/* Remove the opacity and transition properties if you don't plan on using fade effects */
+  }
+
+  .carousel-item.active {
+	display: flex; /* Use flexbox to lay out the active slide */
+	justify-content: space-between; /* Spread the comments evenly */
+	align-items: center; /* Align comments vertically */
+	width: 100%; /* Ensure the carousel item takes full width */
+	/* You can add a transition effect for opacity if you decide to use visibility and opacity */
+  }
+
+  .comment {
+	background-color: #FFA500; /* The orange background color */
+	border-radius: 5px; /* Optional: adds rounded corners to the rectangle */
+	padding: 20px; /* Space inside the rectangle */
+	display: flex;
+	flex-direction: column; /* Stack items vertically */
+	justify-content: space-between; /* Space out title and paragraphs */
+	height: 30rem; /* Adjust height as needed */
+	margin: 0 5px; /* Maintain spacing between comments */
+	color: white; /* Text color - change as needed */
+	flex: 1; /* Each comment takes equal width */
+  }
+
+  .comment h3 {
+	margin: 0 0 10px 0; /* Space below the title */
+	/* Additional title styles */
+  }
+
+  .comment p {
+	margin: 0 0 10px 0; /* Space below each paragraph */
+	/* Additional paragraph styles */
+  }
+
+  .comment p:last-child {
+	margin-bottom: 0; /* No space below the last paragraph */
+  }
+
+  .carousel-nav {
+	grid-row: 3; /* Place navigation dots in the third row */
+	display: flex;
+	justify-content: center; /* Center dots */
+	align-items: end; /* Align dots to the end (bottom) */
+	height: 50px; /* Give a fixed height to ensure the dots are at the bottom */
+  }
+
+  .dot {
+	height: 15px;
+	width: 15px;
+	margin: 0 5px;
+	display: inline-block;
+	border-radius: 50%;
+	background-color: #bbb;
+	cursor: pointer;
+  }
+
+  .dot.active, .dot:hover {
+	background-color: #717171;
+  }
 
 /* --------------Footer Styles-------------- */
 .site-footer {
