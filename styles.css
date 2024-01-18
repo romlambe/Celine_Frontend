@@ -185,12 +185,14 @@ section {
 						"blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 card6  card6  blank8 blank8";
 }
 
+/* top blank */
 .blank1, .blank2, .blank3, .blank4 {
 	background-color: #ffe5e5;
 	height: 100%;
 }
+/*bottom blank */
 .blank5, .blank6, .blank7, .blank8 {
-	background-color: #e5f0ff;
+	background-color: #1554ac;
 	height: 100%;
 }
 .blank1 {grid-area: blank1;}
@@ -303,19 +305,86 @@ section {
 }
 
 /* --------------Lieu Section-------------- */
-.lieu {
-  background: #e5f0ff; /* Light blue */
-  min-height: 45rem;
-}
+.lieu-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 20px;
+	padding-right: 0; /* Remove padding on the right to allow content to touch the edge */
+	height: 50rem;
+	min-height: 46rem;
+	max-height: 54em;
+	position: relative; /* Contain the absolutely positioned .lieu-image */
+	overflow: hidden; /* Prevents scrollbars if content overflows */
+  }
+
+  .lieu-content {
+	max-width: 60ch; /* Limit the content width */
+	margin-left: 20%; /* Pushes the text block away from the left edge */
+	padding-right: 1.25rem; /* Adjust padding as needed */
+  }
+
+  .lieu-image {
+	position: absolute;
+	right: 0; /* Stick to the right edge */
+	top: 0;
+	bottom: 0;
+	width: 50%; /* Width should be enough to contain the image */
+	display: flex; /* Use flexbox to help with the layout */
+	align-items: center; /* Center the image vertically */
+	justify-content: flex-end; /* Align the image to the right */
+  }
+
+  .lieu-image img {
+	position: relative; /* Use relative instead of absolute to stack on top of the color block */
+	z-index: 2; /* Ensure the image is above the color block */
+	max-height: 100%; /* Ensure it doesn't overflow the container */
+  }
+
+  .color-block {
+	position: absolute;
+	right: 0; /* Stick to the right edge */
+	top: 10%; /* Don't extend all the way to the top, adjust the percentage as needed */
+	bottom: 10%; /* Don't extend all the way to the bottom, adjust the percentage as needed */
+	width: 30%; /* Increase the width as needed */
+	background-color: #a8311c; /* The color of the rectangle */
+	z-index: 1; /* Below the image */
+  }
+
 
 /* --------------Image Sections-------------- */
 .image-sections {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  min-height: 22rem; /* Third of the viewport height */
-  background: #fff0e5; /* Light orange */
-}
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+	gap: 20px; /* Space between grid items */
+	align-items: center; /* Vertically center the grid items */
+	justify-items: center; /* Horizontally center the grid items */
+	min-height: 22rem; /* Minimum height for the container */
+	background: #fff0e5; /* Light orange background color */
+  }
+
+  .image-section img {
+	max-width: 55%; /* Set a max-width to make the images smaller */
+	height: auto; /* Maintain the aspect ratio */
+  }
+
+  /* Media query for smaller screens */
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+	.image-sections {
+	  grid-template-columns: 1fr; /* One column for vertical stacking */
+	  text-align: center; /* Center the content for all children */
+	}
+
+	.image-section img {
+	  max-width: 80%; /* Maintain the max width */
+	  height: auto; /* Maintain aspect ratio */
+	  display: inline-block; /* Change display to inline-block for text-align to work */
+	  margin-left: auto; /* Center-align for block-level elements */
+	  margin-right: auto; /* Center-align for block-level elements */
+	}
+  }
 
 /* --------------Carte Section-------------- */
 .carte {
