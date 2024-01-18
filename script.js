@@ -1,39 +1,63 @@
-let slideIndex = 1;
-showSlides(slideIndex); // Initialize the first slide
+document.addEventListener("DOMContentLoaded", function() {
+    let slideIndex = 1;
+    showSlides(slideIndex); // Initialize the first slide
 
-// Start the automatic slideshow
-let slideInterval = setInterval(function() { plusSlides(1); }, 10000);
+    // Start the automatic slideshow
+    let slideInterval = setInterval(function() { plusSlides(1); }, 10000);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+    // Dot navigation setup, if you have dots for navigation
+    let dots = document.querySelectorAll(".dot");
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            currentSlide(index + 1);
+        });
+    });
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("carousel-item");
-  let dots = document.getElementsByClassName("dot");
+    function currentSlide(n) {
+        clearInterval(slideInterval); // Stop the auto-slideshow on manual navigation
+        slideInterval = setInterval(function() { plusSlides(1); }, 10000); // Restart the slideshow
+        showSlides(slideIndex = n);
+    }
 
-  // If n is greater than the number of slides, reset to first slide
-  if (n > slides.length) { slideIndex = 1; }
+    function showSlides(n, immediate = false) {
+        let slides = document.getElementsByClassName("carousel-item");
+        let dots = document.getElementsByClassName("dot");
 
-  // If n is less than 1, set to the last slide
-  if (n < 1) { slideIndex = slides.length; }
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
 
-  // Hide all slides
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+        // Handle the slide-out animation
+        let currentSlide = document.querySelector('.carousel-item.active');
+        if (currentSlide && !immediate) {
+            currentSlide.classList.add("slide-out");
+            setTimeout(() => {
+                currentSlide.classList.remove("active", "slide-out");
 
-  // Remove the 'active' class from all dots
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
+                // Proceed to show the new slide
+                displayNewSlide();
+            }, 500); // This timeout should match the duration of the slide-out animation
+        } else {
+            // No active slide or immediate change requested, directly show the new slide
+            displayNewSlide();
+        }
 
-  // Display the current slide and set the corresponding dot as active
-  slides[slideIndex - 1].style.display = "flex";
-  dots[slideIndex - 1].className += " active";
-}
+        function displayNewSlide() {
+            // Reset all slides before showing the new slide
+            Array.from(slides).forEach(slide => {
+                slide.classList.remove("active");
+            });
+
+            slides[slideIndex - 1].classList.add("active");
+
+            // Update dot navigation
+            Array.from(dots).forEach(dot => {
+                dot.classList.remove("active");
+            });
+            dots[slideIndex - 1].classList.add("active");
+        }
+    }
+});

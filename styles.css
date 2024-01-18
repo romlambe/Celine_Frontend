@@ -102,24 +102,24 @@ section {
 
 /* Parent container of the image */
 .landing-child-40 {
-	grid-column: 2 / 3;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: visible;
-	position: relative; /* Position relative to allow absolute positioning inside */
-  }
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  position: relative; /* Position relative to allow absolute positioning inside */
+}
 
-  /* Image styling */
-  .landing-child-40 img {
-	position: absolute; /* Take it out of the normal flow */
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%); /* Center the image */
-	width: 70%;
-	height: auto;
-	object-fit: cover; /* This decides how the image fits into the box, cover keeps aspect ratio */
-  }
+/* Image styling */
+.landing-child-40 img {
+  position: absolute; /* Take it out of the normal flow */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the image */
+  width: 70%;
+  height: auto;
+  object-fit: cover; /* This decides how the image fits into the box, cover keeps aspect ratio */
+}
 
 .landing-child-30 {
   display: flex;
@@ -130,9 +130,9 @@ section {
 }
 
 .landing-child-30 h2 {
-	margin: 0 0 1.25rem 0;
-	font-size: 1.5rem; /* Example font size in rem */
-  }
+  margin: 0 0 1.25rem 0;
+  font-size: 1.5rem; /* Example font size in rem */
+}
 
 .landing-child-30 p {
   margin: 0 0 20px 0; /* Add some space below each paragraph */
@@ -161,79 +161,163 @@ section {
 
 /* Assigning names to grid areas for easier placement */
 .services-section {
-  grid-template-areas:  "blank1 blank1 blank1 blank1 blank1 blank1 blank1 blank1 card1  card1  blank2 blank2 blank2 blank2 blank2"
-						"blank3 light1 light1 light1 light1 light1 light1 light1 card1  card1  light2 light3 light3 light4 blank4"
-						"blank3 light1 light1 light1 light1 light1 light1 light1 card1  card1  light2 card4  card4  light4 blank4"
-						"cleft  main1  main1  main1  main1  main1  main1  main1  card1  card1  main9  card4  card4  mainc  cright"
-						"cleft  main1  main1  main1  main1  main1  main1  main1  card1  card1  main9  card4  card4  mainc  cright"
-						"cleft  main2  head   head   head   head   head   main4  card1  card1  main9  card4  card4  mainc  cright"
-						"cleft  main2  head   head   head   head   head   main4  main7  main7  main9  card4  card4  mainc  cright"
-						"cleft  main2  main3  main3  main3  main3  main3  main4  card2  card2  main9  card4  card4  mainc  cright"
-						"cleft  main2  main3  main3  main3  main3  main3  main4  card2  card2  main9  maina  maina  mainc  cright"
-						"cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
-						"cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
-						"cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
-						"cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
-						"cleft  main2  text   text   text   text   text   main4  main8  main8  main9  card5  card5  mainc  cright"
-						"cleft  main2  text   text   text   text   text   main4  card3  card3  main9  card5  card5  mainc  cright"
-						"cleft  main2  main5  main5  main6  main6  main6  main6  card3  card3  main9  mainb  mainb  mainc  cright"
-						"cleft  main2  btton  btton  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
-						"cleft  main2  btton  btton  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
-						"cleft  main2  maind  maind  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
-						"blank5 light5 light5 light5 light5 light5 light5 light5 card3  card3  light7 card6  card6  light8 blank6"
-						"blank5 light5 light5 light5 light5 light5 light5 light5 light6 light6 light7 card6  card6  light8 blank6"
-						"blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 card6  card6  blank8 blank8";
+  grid-template-areas:
+    "blank1 blank1 blank1 blank1 blank1 blank1 blank1 blank1 card1  card1  blank2 blank2 blank2 blank2 blank2"
+    "blank3 light1 light1 light1 light1 light1 light1 light1 card1  card1  light2 light3 light3 light4 blank4"
+    "blank3 light1 light1 light1 light1 light1 light1 light1 card1  card1  light2 card4  card4  light4 blank4"
+    "cleft  main1  main1  main1  main1  main1  main1  main1  card1  card1  main9  card4  card4  mainc  cright"
+    "cleft  main1  main1  main1  main1  main1  main1  main1  card1  card1  main9  card4  card4  mainc  cright"
+    "cleft  main2  head   head   head   head   head   main4  card1  card1  main9  card4  card4  mainc  cright"
+    "cleft  main2  head   head   head   head   head   main4  main7  main7  main9  card4  card4  mainc  cright"
+    "cleft  main2  main3  main3  main3  main3  main3  main4  card2  card2  main9  card4  card4  mainc  cright"
+    "cleft  main2  main3  main3  main3  main3  main3  main4  card2  card2  main9  maina  maina  mainc  cright"
+    "cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
+    "cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
+    "cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
+    "cleft  main2  text   text   text   text   text   main4  card2  card2  main9  card5  card5  mainc  cright"
+    "cleft  main2  text   text   text   text   text   main4  main8  main8  main9  card5  card5  mainc  cright"
+    "cleft  main2  text   text   text   text   text   main4  card3  card3  main9  card5  card5  mainc  cright"
+    "cleft  main2  main5  main5  main6  main6  main6  main6  card3  card3  main9  mainb  mainb  mainc  cright"
+    "cleft  main2  btton  btton  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
+    "cleft  main2  btton  btton  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
+    "cleft  main2  maind  maind  main6  main6  main6  main6  card3  card3  main9  card6  card6  mainc  cright"
+    "blank5 light5 light5 light5 light5 light5 light5 light5 card3  card3  light7 card6  card6  light8 blank6"
+    "blank5 light5 light5 light5 light5 light5 light5 light5 light6 light6 light7 card6  card6  light8 blank6"
+    "blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 blank7 card6  card6  blank8 blank8";
 }
 
 /* top blank */
-.blank1, .blank2, .blank3, .blank4 {
-	background-color: #ffe5e5;
-	height: 100%;
+.blank1,
+.blank2,
+.blank3,
+.blank4 {
+  background-color: #ffe5e5;
+  height: 100%;
 }
 /*bottom blank */
-.blank5, .blank6, .blank7, .blank8 {
-	background-color: #1554ac;
-	height: 100%;
+.blank5,
+.blank6,
+.blank7,
+.blank8 {
+  background-color: #1554ac;
+  height: 100%;
 }
-.blank1 {grid-area: blank1;}
-.blank2 {grid-area: blank2;}
-.blank3 {grid-area: blank3;}
-.blank4 {grid-area: blank4;}
-.blank5 {grid-area: blank5;}
-.blank6 {grid-area: blank6;}
-.blank7 {grid-area: blank7;}
-.blank8 {grid-area: blank8;}
-
-.light1, .light2, .light3, .light4, .light5, .light6, .light7, .light8 {
-	background-color: #45ac45;
-	height: 100%;
+.blank1 {
+  grid-area: blank1;
 }
-.light1 {grid-area: light1;}
-.light2 {grid-area: light2;}
-.light3 {grid-area: light3;}
-.light4 {grid-area: light4;}
-.light5 {grid-area: light5;}
-.light6 {grid-area: light6;}
-.light7 {grid-area: light7;}
-.light8 {grid-area: light8;}
+.blank2 {
+  grid-area: blank2;
+}
+.blank3 {
+  grid-area: blank3;
+}
+.blank4 {
+  grid-area: blank4;
+}
+.blank5 {
+  grid-area: blank5;
+}
+.blank6 {
+  grid-area: blank6;
+}
+.blank7 {
+  grid-area: blank7;
+}
+.blank8 {
+  grid-area: blank8;
+}
 
-.bg-main1, .bg-main2, .bg-main3, .bg-main4, .bg-main5, .bg-main6, .bg-main7, .bg-main8, .bg-main9, .bg-maina, .bg-mainb, .bg-mainc, .bg-maind {
+.light1,
+.light2,
+.light3,
+.light4,
+.light5,
+.light6,
+.light7,
+.light8 {
+  background-color: #45ac45;
+  height: 100%;
+}
+.light1 {
+  grid-area: light1;
+}
+.light2 {
+  grid-area: light2;
+}
+.light3 {
+  grid-area: light3;
+}
+.light4 {
+  grid-area: light4;
+}
+.light5 {
+  grid-area: light5;
+}
+.light6 {
+  grid-area: light6;
+}
+.light7 {
+  grid-area: light7;
+}
+.light8 {
+  grid-area: light8;
+}
+
+.bg-main1,
+.bg-main2,
+.bg-main3,
+.bg-main4,
+.bg-main5,
+.bg-main6,
+.bg-main7,
+.bg-main8,
+.bg-main9,
+.bg-maina,
+.bg-mainb,
+.bg-mainc,
+.bg-maind {
   background-color: #ad1071;
   height: 100%;
 }
-.bg-main1 {grid-area: main1;}
-.bg-main2 {grid-area: main2;}
-.bg-main3 {grid-area: main3;}
-.bg-main4 {grid-area: main4;}
-.bg-main5 {grid-area: main5;}
-.bg-main6 {grid-area: main6;}
-.bg-main7 {grid-area: main7;}
-.bg-main8 {grid-area: main8;}
-.bg-main9 {grid-area: main9;}
-.bg-maina {grid-area: maina;}
-.bg-mainb {grid-area: mainb;}
-.bg-mainc {grid-area: mainc;}
-.bg-maind {grid-area: maind;}
+.bg-main1 {
+  grid-area: main1;
+}
+.bg-main2 {
+  grid-area: main2;
+}
+.bg-main3 {
+  grid-area: main3;
+}
+.bg-main4 {
+  grid-area: main4;
+}
+.bg-main5 {
+  grid-area: main5;
+}
+.bg-main6 {
+  grid-area: main6;
+}
+.bg-main7 {
+  grid-area: main7;
+}
+.bg-main8 {
+  grid-area: main8;
+}
+.bg-main9 {
+  grid-area: main9;
+}
+.bg-maina {
+  grid-area: maina;
+}
+.bg-mainb {
+  grid-area: mainb;
+}
+.bg-mainc {
+  grid-area: mainc;
+}
+.bg-maind {
+  grid-area: maind;
+}
 
 .cleft {
   grid-area: cleft;
@@ -306,88 +390,87 @@ section {
 
 /* --------------Lieu Section-------------- */
 .lieu-section {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	padding: 20px;
-	padding-right: 0; /* Remove padding on the right to allow content to touch the edge */
-	height: 50rem;
-	min-height: 46rem;
-	max-height: 54em;
-	position: relative; /* Contain the absolutely positioned .lieu-image */
-	overflow: hidden; /* Prevents scrollbars if content overflows */
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  padding-right: 0; /* Remove padding on the right to allow content to touch the edge */
+  height: 50rem;
+  min-height: 46rem;
+  max-height: 54em;
+  position: relative; /* Contain the absolutely positioned .lieu-image */
+  overflow: hidden; /* Prevents scrollbars if content overflows */
+}
 
-  .lieu-content {
-	max-width: 60ch; /* Limit the content width */
-	margin-left: 20%; /* Pushes the text block away from the left edge */
-	padding-right: 1.25rem; /* Adjust padding as needed */
-  }
+.lieu-content {
+  max-width: 60ch; /* Limit the content width */
+  margin-left: 20%; /* Pushes the text block away from the left edge */
+  padding-right: 1.25rem; /* Adjust padding as needed */
+}
 
-  .lieu-image {
-	position: absolute;
-	right: 0; /* Stick to the right edge */
-	top: 0;
-	bottom: 0;
-	width: 50%; /* Width should be enough to contain the image */
-	display: flex; /* Use flexbox to help with the layout */
-	align-items: center; /* Center the image vertically */
-	justify-content: flex-end; /* Align the image to the right */
-  }
+.lieu-image {
+  position: absolute;
+  right: 0; /* Stick to the right edge */
+  top: 0;
+  bottom: 0;
+  width: 50%; /* Width should be enough to contain the image */
+  display: flex; /* Use flexbox to help with the layout */
+  align-items: center; /* Center the image vertically */
+  justify-content: flex-end; /* Align the image to the right */
+}
 
-  .lieu-image img {
-	position: relative; /* Use relative instead of absolute to stack on top of the color block */
-	z-index: 2; /* Ensure the image is above the color block */
-	max-height: 100%; /* Ensure it doesn't overflow the container */
-  }
+.lieu-image img {
+  position: relative; /* Use relative instead of absolute to stack on top of the color block */
+  z-index: 2; /* Ensure the image is above the color block */
+  max-height: 100%; /* Ensure it doesn't overflow the container */
+}
 
-  .color-block {
-	position: absolute;
-	right: 0; /* Stick to the right edge */
-	top: 10%; /* Don't extend all the way to the top, adjust the percentage as needed */
-	bottom: 10%; /* Don't extend all the way to the bottom, adjust the percentage as needed */
-	width: 30%; /* Increase the width as needed */
-	background-color: #a8311c; /* The color of the rectangle */
-	z-index: 1; /* Below the image */
-  }
-
+.color-block {
+  position: absolute;
+  right: 0; /* Stick to the right edge */
+  top: 10%; /* Don't extend all the way to the top, adjust the percentage as needed */
+  bottom: 10%; /* Don't extend all the way to the bottom, adjust the percentage as needed */
+  width: 30%; /* Increase the width as needed */
+  background-color: #a8311c; /* The color of the rectangle */
+  z-index: 1; /* Below the image */
+}
 
 /* --------------Image Sections-------------- */
 .image-sections {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
-	gap: 20px; /* Space between grid items */
-	align-items: center; /* Vertically center the grid items */
-	justify-items: center; /* Horizontally center the grid items */
-	min-height: 22rem; /* Minimum height for the container */
-	background: #fff0e5; /* Light orange background color */
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  gap: 20px; /* Space between grid items */
+  align-items: center; /* Vertically center the grid items */
+  justify-items: center; /* Horizontally center the grid items */
+  min-height: 22rem; /* Minimum height for the container */
+  background: #fff0e5; /* Light orange background color */
+}
 
-  .image-section img {
-	max-width: 55%; /* Set a max-width to make the images smaller */
-	height: auto; /* Maintain the aspect ratio */
-  }
+.image-section img {
+  max-width: 55%; /* Set a max-width to make the images smaller */
+  height: auto; /* Maintain the aspect ratio */
+}
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-	.image-sections {
-	  grid-template-columns: 1fr; /* One column for vertical stacking */
-	  text-align: center; /* Center the content for all children */
-	  padding-top: 20px; /* Add padding at the top of the container */
-	  padding-bottom: 20px; /* Add padding at the bottom of the container */
-	}
-
-	.image-section img {
-	  max-width: 70%; /* Maintain the max width */
-	  height: auto; /* Maintain aspect ratio */
-	  display: block; /* Block display for images */
-	  margin-left: auto; /* Center-align for block-level elements */
-	  margin-right: auto; /* Center-align for block-level elements */
-	  margin-top: 10px; /* Add space at the top of the image */
-	  margin-bottom: 10px; /* Add space at the bottom of the image */
-	}
+  .image-sections {
+    grid-template-columns: 1fr; /* One column for vertical stacking */
+    text-align: center; /* Center the content for all children */
+    padding-top: 20px; /* Add padding at the top of the container */
+    padding-bottom: 20px; /* Add padding at the bottom of the container */
   }
+
+  .image-section img {
+    max-width: 70%; /* Maintain the max width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Block display for images */
+    margin-left: auto; /* Center-align for block-level elements */
+    margin-right: auto; /* Center-align for block-level elements */
+    margin-top: 10px; /* Add space at the top of the image */
+    margin-bottom: 10px; /* Add space at the bottom of the image */
+  }
+}
 
 /* --------------Carte Section-------------- */
 .carte {
@@ -396,89 +479,115 @@ section {
 
 /* --------------Comments Section-------------- */
 .comments {
-	display: grid;
-	grid-template-rows: 1fr 3fr 1fr; /* Allocate space for title, carousel, and dots */
-	background: #e5fff0; /* Light mint */
-	min-height: 37.5rem; /* Half of the viewport height */
-	padding: 20px; /* Add some padding */
-  }
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr; /* Allocate space for title, carousel, and dots */
+  background: #e5fff0; /* Light mint */
+  min-height: 37.5rem; /* Half of the viewport height */
+  padding: 20px; /* Add some padding */
+}
 
-  .carousel-title {
-	grid-row: 1; /* Place title in the first row */
-	text-align: center; /* Center the title */
-	/* Add more styling as needed */
-  }
+.carousel-title {
+  grid-row: 1; /* Place title in the first row */
+  text-align: center; /* Center the title */
+  /* Add more styling as needed */
+}
 
-  .carousel-container {
-	grid-row: 2; /* Place carousel in the second row */
-	position: relative;
-	overflow: hidden; /* Hide overflow */
-	display: flex; /* Add flex display to the container */
-	flex-wrap: nowrap; /* Prevent wrapping of items */
-	width: 100%;
-  }
+.carousel-container {
+  grid-row: 2; /* Place carousel in the second row */
+  position: relative;
+  overflow: hidden; /* Hide overflow */
+  display: flex; /* Add flex display to the container */
+  flex-wrap: nowrap; /* Prevent wrapping of items */
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 
-  .carousel-item {
-	display: none; /* Hide all slides by default */
-	/* Remove the opacity and transition properties if you don't plan on using fade effects */
-  }
+.carousel-item {
+  display: none; /* Hide all slides by default */
+  flex: 0 0 100%; /* Each slide is as wide as the carousel */
+  animation: slideOut 0.5s ease-in-out forwards;
+}
 
-  .carousel-item.active {
-	display: flex; /* Use flexbox to lay out the active slide */
-	justify-content: space-between; /* Spread the comments evenly */
-	align-items: center; /* Align comments vertically */
-	width: 100%; /* Ensure the carousel item takes full width */
-	/* You can add a transition effect for opacity if you decide to use visibility and opacity */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
   }
+  to {
+    transform: translateX(0);
+  }
+}
 
-  .comment {
-	background-color: #FFA500; /* The orange background color */
-	border-radius: 5px; /* Optional: adds rounded corners to the rectangle */
-	padding: 20px; /* Space inside the rectangle */
-	display: flex;
-	flex-direction: column; /* Stack items vertically */
-	justify-content: space-between; /* Space out title and paragraphs */
-	height: 30rem; /* Adjust height as needed */
-	margin: 0 5px; /* Maintain spacing between comments */
-	color: white; /* Text color - change as needed */
-	flex: 1; /* Each comment takes equal width */
-  }
+.carousel-item.active {
+  display: flex; /* Use flexbox to lay out the active slide */
+  justify-content: space-between; /* Spread the comments evenly */
+  align-items: center; /* Align comments vertically */
+  width: 100%; /* Ensure the carousel item takes full width */
+  animation: slideIn 0.5s ease-in-out forwards;
+}
 
-  .comment h3 {
-	margin: 0 0 10px 0; /* Space below the title */
-	/* Additional title styles */
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
   }
+  to {
+    transform: translateX(-100%);
+  }
+}
 
-  .comment p {
-	margin: 0 0 10px 0; /* Space below each paragraph */
-	/* Additional paragraph styles */
-  }
+.carousel-item.slide-out {
+  animation: slideOut 0.5s ease-in-out forwards;
+}
 
-  .comment p:last-child {
-	margin-bottom: 0; /* No space below the last paragraph */
-  }
+.comment {
+  background-color: #ffa500; /* The orange background color */
+  border-radius: 5px; /* Optional: adds rounded corners to the rectangle */
+  padding: 20px; /* Space inside the rectangle */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Space out title and paragraphs */
+  height: 30rem; /* Adjust height as needed */
+  margin: 0 5px; /* Maintain spacing between comments */
+  color: white; /* Text color - change as needed */
+  flex: 1; /* Each comment takes equal width */
+}
 
-  .carousel-nav {
-	grid-row: 3; /* Place navigation dots in the third row */
-	display: flex;
-	justify-content: center; /* Center dots */
-	align-items: end; /* Align dots to the end (bottom) */
-	height: 50px; /* Give a fixed height to ensure the dots are at the bottom */
-  }
+.comment h3 {
+  margin: 0 0 10px 0; /* Space below the title */
+  /* Additional title styles */
+}
 
-  .dot {
-	height: 15px;
-	width: 15px;
-	margin: 0 5px;
-	display: inline-block;
-	border-radius: 50%;
-	background-color: #bbb;
-	cursor: pointer;
-  }
+.comment p {
+  margin: 0 0 10px 0; /* Space below each paragraph */
+  /* Additional paragraph styles */
+}
 
-  .dot.active, .dot:hover {
-	background-color: #717171;
-  }
+.comment p:last-child {
+  margin-bottom: 0; /* No space below the last paragraph */
+}
+
+.carousel-nav {
+  grid-row: 3; /* Place navigation dots in the third row */
+  display: flex;
+  justify-content: center; /* Center dots */
+  align-items: end; /* Align dots to the end (bottom) */
+  height: 50px; /* Give a fixed height to ensure the dots are at the bottom */
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #717171;
+}
 
 /* --------------Footer Styles-------------- */
 .site-footer {
@@ -491,7 +600,7 @@ section {
 @media (max-width: 768px) {
   .image-sections {
     grid-template-columns: repeat(1, 1fr);
-	font-size: 14px;
+    font-size: 14px;
   }
 
   /* Adjust sections to auto height for smaller screens
