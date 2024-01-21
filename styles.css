@@ -5,15 +5,23 @@
   padding: 0;
 }
 
+@font-face {
+	font-family: 'Jacques Francois';
+	src: url('/font/JacquesFrancois-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body,
 html {
-  font-family: "Arial", sans-serif;
+font-family: 'Jacques Francois', serif;
   font-size: 16px;
 }
 
 /* --------------HEADER----------------- */
 .site-header {
-  background: #dcdcdc; /* Light grey */
+  background: #D3C09E; /* Light grey */
+  color: white;
   padding: 20px;
   position: sticky;
   top: 0;
@@ -37,6 +45,7 @@ html {
     -50%
   ); /* Offset by half the width of the title for centering */
   z-index: 99; /* Ensures that the title does not overlap the navigation */
+  font-size: 2em;
 }
 
 /* Navigation */
@@ -63,7 +72,7 @@ html {
   text-decoration: none;
   background: none; /* Removes background from buttons */
   border: none; /* Removes border from buttons */
-  color: #000; /* Text main  for navigation items */
+  color: white; /* Text main  for navigation items */
   font-weight: bold; /* Makes the navigation items bold */
   cursor: pointer; /* Changes cursor to pointer when hovering over the items */
   line-height: 1; /* Adjust line height to ensure vertical centering */
@@ -95,9 +104,13 @@ section {
 .landing {
   display: grid;
   grid-template-columns: 10vw 40vw 30vw 20vw; /* Define the grid layout with two columns */
-  background: #ffe5e5; /* Light red */
+  background: #F9F7F3; /* Light red */
   min-height: 40rem;
   height: 45rem;
+  background-image: url('img/1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 /* Parent container of the image */
@@ -127,7 +140,7 @@ section {
 
 .landing-child-30 h2 {
   margin: 0 0 1.25rem 0;
-  font-size: 1.5rem; /* Example font size in rem */
+  font-size: 5rem; /* Example font size in rem */
 }
 
 .landing-child-30 p {
@@ -187,7 +200,7 @@ section {
 .blank2,
 .blank3,
 .blank4 {
-  background-color: #ffe5e5;
+  background-color: #F9F7F3;
   height: 100%;
 }
 /*bottom blank */
@@ -195,7 +208,7 @@ section {
 .blank6,
 .blank7,
 .blank8 {
-  background-color: #1554ac;
+  background-color: #F9F7F3;
   height: 100%;
 }
 .blank1 {
@@ -231,7 +244,7 @@ section {
 .light6,
 .light7,
 .light8 {
-  background-color: #45ac45;
+  background-color: #F2EDE2D9;
   height: 100%;
 }
 .light1 {
@@ -272,7 +285,7 @@ section {
 .bg-mainb,
 .bg-mainc,
 .bg-maind {
-  background-color: #ad1071;
+  background-color: #d3c1a2;
   height: 100%;
 }
 .bg-main1 {
@@ -317,13 +330,13 @@ section {
 
 .cleft {
   grid-area: cleft;
-  background-color: #d4a269;
+  background-color: #E4D5BB;
   height: 100%;
 }
 
 .cright {
   grid-area: cright;
-  background-color: #a8311c;
+  background-color: #A63D28;
   height: 100%;
 }
 
@@ -357,11 +370,13 @@ section {
   display: flex; /* To align the content inside the cards */
   justify-content: center; /* Horizontally center the content */
   align-items: center; /* Vertically center the content */
+  height: 100%;
   /* Style the service cards */
 }
 
 .service-card1 {
   grid-area: card1;
+  background-color: #a73001;
 }
 
 .service-card2 {
@@ -397,6 +412,11 @@ section {
   max-height: 54em;
   position: relative; /* Contain the absolutely positioned .lieu-image */
   overflow: hidden; /* Prevents scrollbars if content overflows */
+  background-color: #F9F7F3;
+  background-image: url('img/2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .lieu-content {
@@ -436,15 +456,22 @@ section {
 .image-sections {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
-  gap: 20px; /* Space between grid items */
+  gap: 10px; /* Space between grid items */
   align-items: center; /* Vertically center the grid items */
   justify-items: center; /* Horizontally center the grid items */
   min-height: 22rem; /* Minimum height for the container */
-  background: #fff0e5; /* Light orange background color */
+  background-color: #ECE0D3; /* Light orange background color */
 }
 
+.image-section {
+	display: flex; /* Use flexbox for alignment */
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+	width: 100%; /* Use full width of the grid column */
+  }
+
 .image-section img {
-  max-width: 55%; /* Set a max-width to make the images smaller */
+  max-width: 65%; /* Set a max-width to make the images smaller */
   height: auto; /* Maintain the aspect ratio */
 }
 
@@ -470,14 +497,18 @@ section {
 
 /* --------------Carte Section-------------- */
 .carte {
-  background: #f0e5ff; /* Light purple */
+	background-color: #F9F7F3;
+	background-image: url('img/3.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 /* --------------Comments Section-------------- */
 .comments {
   display: grid;
   grid-template-rows: 1fr 3fr 1fr; /* Allocate space for title, carousel, and dots */
-  background: #e5fff0; /* Light mint */
+  background: #ECE0D3; /* Light mint */
   min-height: 37.5rem; /* Half of the viewport height */
   padding: 20px; /* Add some padding */
 }
@@ -536,7 +567,7 @@ section {
 }
 
 .comment {
-  background-color: #ffa500; /* The orange background color */
+  background-color: #CE8669; /* The orange background color */
   border-radius: 5px; /* Optional: adds rounded corners to the rectangle */
   padding: 20px; /* Space inside the rectangle */
   display: flex;
@@ -576,19 +607,19 @@ section {
   margin: 0 5px;
   display: inline-block;
   border-radius: 50%;
-  background-color: #bbb;
+  background-color: #D9D9D9;
   cursor: pointer;
 }
 
 .dot.active,
 .dot:hover {
-  background-color: #717171;
+  background-color: #CE8669;
 }
 
 /* --------------Footer Styles-------------- */
 .site-footer {
-	background: #333333; /* Dark grey */
-	color: white;
+	background: #E4D5BB; /* Dark grey */
+	color: rgb(0, 0, 0);
 	padding: 2rem;
 	display: flex;
 	align-items: flex-start;
