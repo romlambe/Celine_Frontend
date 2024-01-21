@@ -587,10 +587,45 @@ section {
 
 /* --------------Footer Styles-------------- */
 .site-footer {
-  background: #333333; /* Dark grey */
-  color: white;
-  min-height: 20rem; /* The other half of the viewport height */
-}
+	background: #333333; /* Dark grey */
+	color: white;
+	padding: 2rem;
+	display: flex;
+	align-items: flex-start;
+	height: 20rem;
+  }
+
+  .footer-container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+  }
+
+  .footer-map img {
+	max-width: 20rem;
+	height: auto;
+  }
+
+  .footer-text-columns {
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1;
+	margin-left: 2rem;
+  }
+
+  .footer-column {
+	margin: 0 1rem;
+  }
+
+  .footer-column h3 {
+	margin-bottom: 0.5rem;
+  }
+
+  .footer-column p {
+	margin-bottom: 0.5rem;
+	line-height: 1.5;
+  }
+
 
 /* --------------Responsive Grid Layout for smaller screens-------------- */
 @media (max-width: 768px) {
