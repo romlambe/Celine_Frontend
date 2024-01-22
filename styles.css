@@ -7,15 +7,16 @@
 
 @font-face {
 	font-family: 'Jacques Francois';
-	src: url('/font/JacquesFrancois-Regular.ttf') format('truetype');
+	src: url('/font/JacquesFrancois-Regular.otf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 body,
 html {
-font-family: 'Jacques Francois', serif;
+  font-family: 'Jacques Francois', serif;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 /* --------------HEADER----------------- */
@@ -285,7 +286,7 @@ section {
 .bg-mainb,
 .bg-mainc,
 .bg-maind {
-  background-color: #d3c1a2;
+  background-color: #ECE0D3;
   height: 100%;
 }
 .bg-main1 {
@@ -343,26 +344,45 @@ section {
 /* Text part */
 .service-header {
   grid-area: head;
+  font-size: 3rem;
+  background-color: #ECE0D3;
+  height: 100%;
 }
 
 .service-main {
   grid-area: text;
+  background-color: #ECE0D3;
+  height: 100%;
 }
 
 .service-button {
   grid-area: btton;
   display: flex; /* For centering content inside the button container */
-  justify-content: center; /* Center the button horizontally */
   align-items: center; /* Center the button vertically */
+  background-color: #ECE0D3;
+  height: 100%;
 }
 
-.service-button button {
-  padding: 10px 20px; /* Padding inside the button */
-  border: none; /* Remove default border */
-  background-color: #f8f8f8; /* Background main  of the button */
-  cursor: pointer; /* Cursor to indicate button is clickable */
-  /* Style the button text */
-}
+.button-link {
+	display: inline-block; /* Allows us to set padding and margins */
+	padding: 10px 20px; /* Adjust padding as needed */
+	border: 2px solid #000; /* Solid black border */
+	background-color: #ECE0D3;
+	color: #000; /* Text color */
+	text-align: center;
+	text-decoration: none; /* Removes underline from links */
+	font-size: 1rem; /* Adjust the font size as needed */
+	border-radius: 20px; /* Rounded corners */
+	cursor: pointer; /* Cursor to indicate button is clickable */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+	transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+
+  .button-link:hover {
+	background-color: #E4D5BB;; /* Slightly darker background on hover */
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+  }
+
 
 /* Cards */
 
