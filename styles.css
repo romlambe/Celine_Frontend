@@ -6,15 +6,15 @@
 }
 
 @font-face {
-	font-family: 'Jacques Francois';
-	src: url('/font/JacquesFrancois-Regular.otf') format('truetype');
+	font-family: 'Times';
+	src: url('/font/Times_Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 body,
 html {
-  font-family: 'Jacques Francois', serif;
+  font-family: 'Times', serif;
   font-size: 16px;
   scroll-behavior: smooth;
 }
