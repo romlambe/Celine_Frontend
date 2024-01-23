@@ -7,8 +7,8 @@
 
 @font-face {
 	font-family: 'Times';
-	src: url('/font/Times_Regular.ttf') format('truetype');
-	font-weight: normal;
+	src: url('/font/NotoSerif.ttf') format('truetype');
+	font-weight: 400;
 	font-style: normal;
 }
 
@@ -396,7 +396,7 @@ section {
 
 .service-card1 {
   grid-area: card1;
-  background-color: #a73001;
+  background-color: #CE8669;
 }
 
 .service-card2 {
