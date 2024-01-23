@@ -386,13 +386,46 @@ section {
 
 /* Cards */
 
+/* Style général des cartes */
 .service-card {
-  display: flex; /* To align the content inside the cards */
-  justify-content: center; /* Horizontally center the content */
-  align-items: center; /* Vertically center the content */
-  height: 100%;
-  /* Style the service cards */
-}
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 20px;
+	background-color: #ffffff;
+	border: 1px solid #e0e0e0;
+	/* border-radius: 1rem; */
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s;
+	height: 105%;
+  }
+
+  .service-card:hover {
+	transform: scale(1.05);
+  }
+
+  /* Style des images dans les cartes */
+  .service-card img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+  }
+
+  /* Style des titres des cartes */
+  .service-card h2 {
+	font-size: 1.5rem;
+	margin: 0;
+	color: #333;
+  }
+
+  /* Style des paragraphes de texte dans les cartes */
+  .service-card p {
+	font-size: 1rem;
+	color: #777;
+	margin: 0;
+  }
+
 
 .service-card1 {
   grid-area: card1;
