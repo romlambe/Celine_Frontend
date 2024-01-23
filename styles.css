@@ -442,6 +442,7 @@ section {
 
 .service-card4 {
   grid-area: card4;
+  border-radius: 1rem;
 }
 
 .service-card5 {
