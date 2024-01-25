@@ -46,7 +46,7 @@ html {
     -50%
   ); /* Offset by half the width of the title for centering */
   z-index: 99; /* Ensures that the title does not overlap the navigation */
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 /* Navigation */
@@ -88,6 +88,10 @@ html {
   justify-content: flex-end;
 }
 
+.menu-icon {
+    display: none; /* Cache l'icône du menu par défaut */
+}
+
 @media screen and (max-width: 1160px) {
     .site-header {
         justify-content: space-around; /* Adjusts space distribution */
@@ -101,6 +105,48 @@ html {
 
     .navigation {
         justify-content: center; /* Center the navigation items */
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .menu-icon {
+        display: block; /* Affiche l'icône du menu */
+        /* Autres styles de l'icône du menu */
+    }
+
+    .navigation {
+        display: none; /* Cache le menu par défaut */
+        flex-direction: column;
+        background-color: #D3C09E; /* Couleur de fond */
+        /* Autres styles pour le menu déroulant */
+    }
+
+    .navigation.active {
+        display: flex; /* Affiche le menu lorsqu'il est actif */
+    }
+
+    .menu-container {
+        position: relative; /* Positionnement relatif pour le conteneur */
+    }
+
+    .navigation {
+        position: absolute; /* Position absolue pour le menu déroulant */
+        top: 100%; /* Place le menu juste en dessous de l'icône du menu */
+        right: 0; /* Aligné à droite */
+        width: auto; /* Largeur ajustée au contenu */
+        /* Autres styles pour le positionnement et l'apparence */
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .site-title h4 {
+        font-size: 1.5rem; /* Réduit la taille de la police à 3rem */
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .site-title h4 {
+        font-size: 1rem; /* Réduit la taille de la police à 3rem */
     }
 }
 

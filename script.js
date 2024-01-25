@@ -1,3 +1,8 @@
+document.querySelector('.menu-icon').addEventListener('click', function() {
+    var nav = document.querySelector('.navigation');
+    nav.classList.toggle('active');
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     let slideIndex = 1;
     showSlides(slideIndex); // Initialize the first slide
