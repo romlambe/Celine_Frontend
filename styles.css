@@ -497,13 +497,14 @@ section {
   position: relative; /* Use relative instead of absolute to stack on top of the color block */
   z-index: 2; /* Ensure the image is above the color block */
   max-height: 100%; /* Ensure it doesn't overflow the container */
+  width:75%;
 }
 
 .color-block {
   position: absolute;
   right: 0; /* Stick to the right edge */
-  top: 10%; /* Don't extend all the way to the top, adjust the percentage as needed */
-  bottom: 10%; /* Don't extend all the way to the bottom, adjust the percentage as needed */
+  top: 5%; /* Don't extend all the way to the top, adjust the percentage as needed */
+  bottom: 5%; /* Don't extend all the way to the bottom, adjust the percentage as needed */
   width: 30%; /* Increase the width as needed */
   background-color: #a8311c; /* The color of the rectangle */
   z-index: 1; /* Below the image */
@@ -574,8 +575,8 @@ section {
 .carte-content {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
+    grid-row-gap: 5rem;
+    grid-column-gap: 20rem;
     align-items: center;
 }
 
@@ -588,18 +589,6 @@ section {
 .text {
     grid-row: span 1;
 }
-
-.large-img {
-    width: 40%;
-    display: block; /* Ensures the image is not display: none */
-    position: absolute;
-    top: 0; /* Adjust or remove to change the image's position */
-    left: 0; /* Ensure the image starts from the left edge */
-    z-index: 0; /* Adjust or remove this line for troubleshooting */
-    /* Try adding the following line to ensure the image is on top for testing */
-    opacity: 0.5; /* Makes the image semi-transparent for testing overlap */
-}
-
 
 /* --------------Comments Section-------------- */
 .comments {
