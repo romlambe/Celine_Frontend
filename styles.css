@@ -88,6 +88,23 @@ html {
   justify-content: flex-end;
 }
 
+@media screen and (max-width: 1160px) {
+    .site-header {
+        justify-content: space-around; /* Adjusts space distribution */
+    }
+
+    .site-title {
+        position: static; /* Resets the position */
+        transform: none; /* Removes the transform */
+        margin: 0 auto; /* Centers the title in the available space */
+    }
+
+    .navigation {
+        justify-content: center; /* Center the navigation items */
+    }
+}
+
+
 /* --------------MAIN SECTION----------------- */
 section {
   display: flex;
@@ -566,10 +583,7 @@ section {
 .carte {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #F9F7F3;
-    position: relative;
+    align-items: center;text-align: center;
 }
 
 .carte-content {
@@ -623,7 +637,7 @@ section {
 }
 
 @keyframes slideIn {
-  from {
+  from {text-align: center;
     transform: translateX(100%);
   }
   to {
@@ -743,6 +757,33 @@ section {
 	line-height: 1.5;
   }
 
+  @media screen and (max-width: 1000px) {
+	.site-footer {
+        height: auto; /* Adjusts height to content */
+        padding-bottom: 2rem; /* Additional padding at the bottom, if needed */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+	.footer-map img {
+		width: 100%;
+		height: auto;
+		margin: auto; /* Centers the image horizontally */
+	}
+
+    .footer-text-columns {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .footer-column {
+        margin: 1rem 0; /* Adjust margin for vertical layout */
+		text-align: center;
+    }
+}
 
 /* --------------Responsive Grid Layout for smaller screens-------------- */
 @media (max-width: 768px) {
