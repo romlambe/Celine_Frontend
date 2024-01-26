@@ -219,6 +219,47 @@ section {
   /* Additional styling for the centered text */
 }
 
+@media screen and (max-width: 1650px) {
+    .landing {
+        /* Adjust the grid layout to give more space to the text column */
+        grid-template-columns: 10vw 35vw 45vw 10vw;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .landing {
+        /* Increase the height of the landing section */
+        height: 60rem; /* Adjust this value as needed */
+        min-height: 55rem; /* Optional: adjust the minimum height as needed */
+		grid-template-columns: 0vw 50vw 50vw 0vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+	.landing-child-30 h2 {
+		font-size: 3rem; /* Example font size in rem */
+	  }
+}
+
+@media screen and (max-width: 650px) {
+    .landing {
+        grid-template-rows: auto auto; /* Create two row tracks */
+        grid-template-columns: 1fr; /* Set to one column */
+        height: 70rem; /* Adjust this value as needed */
+        min-height: 65rem; /* Optional: adjust the minimum height as needed */
+    }
+
+    .landing-child-40 {
+        grid-column: 1; /* Place image in the first column */
+        grid-row: 1; /* Place image in the first row */
+    }
+
+    .landing-child-30 {
+        grid-column: 1; /* Place text in the first column */
+        grid-row: 2; /* Place text in the second row */
+    }
+}
+
 /* --------------Services Section-------------- */
 .services-section {
   width: auto;
