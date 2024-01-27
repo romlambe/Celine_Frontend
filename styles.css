@@ -578,7 +578,7 @@ section {
 
 .lieu-content {
   max-width: 60ch; /* Limit the content width */
-  margin-left: 20%; /* Pushes the text block away from the left edge */
+  margin-left: 10rem; /* Pushes the text block away from the left edge */
   padding-right: 1.25rem; /* Adjust padding as needed */
 }
 
@@ -609,9 +609,103 @@ section {
   right: 0; /* Stick to the right edge */
   top: 5%; /* Don't extend all the way to the top, adjust the percentage as needed */
   bottom: 5%; /* Don't extend all the way to the bottom, adjust the percentage as needed */
-  width: 30%; /* Increase the width as needed */
+  width: 16rem; /* Increase the width as needed */
   background-color: #a8311c; /* The color of the rectangle */
   z-index: 1; /* Below the image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1300px) {
+    .lieu-content {
+        margin-left: 5rem; /* Smaller margin for medium screens */
+        max-width: 50ch; /* Slightly narrower text line */
+    }
+    .lieu-content h2 {
+        font-size: 4rem; /* Smaller font size for medium screens */
+    }
+    .color-block {
+        width: 12rem; /* Thinner color block for medium screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .lieu-content {
+        margin-left: 2rem; /* Even smaller margin for small screens */
+        max-width: 40ch; /* More narrow text line for small screens */
+    }
+    .lieu-content h2 {
+        font-size: 3rem; /* Even smaller font size for small screens */
+    }
+    .color-block {
+        width: 8rem; /* Even thinner for small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .lieu-section {
+        flex-direction: column; /* Change to column layout */
+        align-items: center; /* Align items to the center */
+    }
+    .lieu-content {
+        width: 100%; /* Full width for content */
+        max-width: 100%; /* Allow content to fill its container */
+        margin-left: 0; /* Reset margin left */
+		margin-right: 4rem;
+        padding: 0 2rem; /* Add padding to both sides */
+        box-sizing: border-box; /* Include padding in the width calculation */
+    }
+    .lieu-content h2 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+    .lieu-image {
+        width: 100%; /* Full width for the image container */
+        height: auto; /* Adjust height automatically */
+        order: -1; /* Place image above the content */
+        position: static; /* Reset position to flow in normal document order */
+        justify-content: flex-end; /* Center image horizontally */
+    }
+    .lieu-image img {
+        width: auto; /* Adjust width automatically */
+        max-height: 30vh; /* Smaller image height, 30% of the viewport height */
+        max-width: 80%; /* Smaller image width, 80% of the container width */
+        margin-top: 2rem; /* Increase space above the image */
+        margin-bottom: 1rem; /* Add some space below the image */
+    }
+    .color-block {
+        position: absolute; /* Keep it absolutely positioned */
+        width: 4rem; /* Keep the original thin width */
+        right: 0; /* Align to the right */
+        top: 5%; /* Distance from the top */
+        bottom: 5%; /* Distance from the bottom */
+        z-index: 1; /* Keep it below the image */
+    }
+}
+
+@media (max-width: 450px) {
+    .lieu-section {
+        min-height: 60rem; /* Augmenter la hauteur minimale */
+    }
+    .lieu-content {
+        padding-bottom: 2rem; /* Ajouter du padding en bas pour allonger la section */
+    }
+    .lieu-image img {
+        max-height: 25vh;
+		margin-top: 3rem;
+    }
+    /* Vous pouvez également vouloir ajuster d'autres propriétés ici si nécessaire */
+}
+
+@media (max-width: 375px) {
+    .lieu-section {
+        min-height: 70rem; /* Augmenter la hauteur minimale */
+    }
+    .lieu-content {
+        padding-bottom: 2rem; /* Ajouter du padding en bas pour allonger la section */
+    }
+    .lieu-image img {
+        max-height: 25vh; /* Ajuster si nécessaire pour la taille de l'image */
+    }
+    /* Vous pouvez également vouloir ajuster d'autres propriétés ici si nécessaire */
 }
 
 /* --------------Image Sections-------------- */
