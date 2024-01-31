@@ -897,6 +897,22 @@ section {
   background-color: #CE8669;
 }
 
+@media (max-width: 768px) {
+	.carousel-container {
+	  /* Change flex direction to column so items stack vertically */
+	  flex-direction: column;
+	  align-items: center; /* Center align items for better presentation */
+	}
+
+	.comment {
+	  /* Remove margin from left and right and add it to the bottom for spacing */
+	  margin: 0 0 2rem 0;
+	  width: 80%; /* Make the comment take up 80% of the container width */
+	  /* You might want to adjust the height or make it auto to accommodate different content lengths */
+	  height: auto;
+	}
+  }
+
 /* --------------Footer Styles-------------- */
 .site-footer {
 	background: #E4D5BB; /* Dark grey */
