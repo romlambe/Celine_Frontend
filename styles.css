@@ -899,19 +899,30 @@ section {
 
 @media (max-width: 768px) {
 	.carousel-container {
-	  /* Change flex direction to column so items stack vertically */
+	  /* Changez la direction du flex pour que les éléments s'empilent verticalement */
 	  flex-direction: column;
-	  align-items: center; /* Center align items for better presentation */
+	  align-items: center; /* Centrez les éléments pour une meilleure présentation */
 	}
 
-	.comment {
-	  /* Remove margin from left and right and add it to the bottom for spacing */
-	  margin: 0 0 2rem 0;
-	  width: 80%; /* Make the comment take up 80% of the container width */
-	  /* You might want to adjust the height or make it auto to accommodate different content lengths */
-	  height: auto;
+	.carousel-item,
+	.carousel-item.active {
+	  /* Assurez-vous que les éléments de carrousel sont affichés en bloc et occupent la largeur complète */
+	  display: block;
+	  width: 100%;
 	}
-  }
+
+	.carousel-item .comment {
+	  /* Chaque commentaire prend la largeur complète du conteneur et ajoute de la marge en bas pour l'espacement */
+	  width: 100%;
+	  margin: 0 0 1rem 0; /* Ajustez selon vos besoins */
+	  height: auto; /* La hauteur s'ajuste en fonction du contenu du commentaire */
+	}
+
+	/* Assurez-vous qu'il n'y a pas de marge supplémentaire au-dessus du premier commentaire */
+	.carousel-item .comment:first-child {
+	  margin-top: 0;
+	}
+}
 
 /* --------------Footer Styles-------------- */
 .site-footer {
