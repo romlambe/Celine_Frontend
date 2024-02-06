@@ -6,9 +6,9 @@ document.querySelector('.menu-icon').addEventListener('click', function() {
 function adjustImageForViewport() {
 	const imgElement = document.querySelector('.landing-child-40 img');
 	if (window.innerWidth <= 650) {
-		imgElement.src = 'img/tete_tel.webp'; // Path to the smaller image
+		imgElement.src = 'image/landing/Celine_small.webp'; // Path to the smaller image
 	} else {
-		imgElement.src = 'img/profil.webp'; // Path to the original image
+		imgElement.src = 'image/landing/Celine.webp'; // Path to the original image
 	}
 }
 

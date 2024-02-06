@@ -171,7 +171,7 @@ section {
   background: #F9F7F3; /* Light red */
   min-height: 40rem;
   height: 45rem;
-  background-image: url('img/1.png');
+  background-image: url('image/landing/background1.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -577,7 +577,7 @@ section {
   position: relative; /* Contain the absolutely positioned .lieu-image */
   overflow: hidden; /* Prevents scrollbars if content overflows */
   background-color: #F9F7F3;
-  background-image: url('img/2.png');
+  background-image: url('image/lieu/background2.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -761,7 +761,7 @@ section {
 /* --------------Carte Section-------------- */
 .carte {
 	background-color: #F9F7F3;
-	background-image: url('img/3.png');
+	background-image: url('image/carte/background3.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
