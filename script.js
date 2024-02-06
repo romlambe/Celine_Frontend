@@ -3,6 +3,21 @@ document.querySelector('.menu-icon').addEventListener('click', function() {
     nav.classList.toggle('active');
 });
 
+function adjustImageForViewport() {
+	const imgElement = document.querySelector('.landing-child-40 img');
+	if (window.innerWidth <= 650) {
+		imgElement.src = 'img/tete_tel.webp'; // Path to the smaller image
+	} else {
+		imgElement.src = 'img/profil.webp'; // Path to the original image
+	}
+}
+
+// Listen for window resize events
+window.addEventListener('resize', adjustImageForViewport);
+
+// Adjust the image when the script loads
+document.addEventListener('DOMContentLoaded', adjustImageForViewport);
+
 document.addEventListener("DOMContentLoaded", function() {
     let slideIndex = 1;
     showSlides(slideIndex); // Initialize the first slide

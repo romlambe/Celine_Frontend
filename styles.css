@@ -252,11 +252,18 @@ section {
     .landing-child-40 {
         grid-column: 1; /* Place image in the first column */
         grid-row: 1; /* Place image in the first row */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .landing-child-30 {
-        grid-column: 1; /* Place text in the first column */
-        grid-row: 2; /* Place text in the second row */
+    .landing-child-40 img {
+        display: block; /* Ensure the image is displayed */
+        max-width: 100%; /* Image can scale up to 100% of its parent */
+        max-height: 100%; /* Maintain aspect ratio without exceeding the parent's height */
+        width: auto; /* Adjust width automatically */
+        height: auto; /* Adjust height automatically */
+        object-fit: contain; /* Ensure the full image is visible */
     }
 }
 
