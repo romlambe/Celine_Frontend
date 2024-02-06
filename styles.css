@@ -898,30 +898,35 @@ section {
 }
 
 @media (max-width: 768px) {
-	.carousel-container {
-	  /* Changez la direction du flex pour que les éléments s'empilent verticalement */
-	  flex-direction: column;
-	  align-items: center; /* Centrez les éléments pour une meilleure présentation */
+	.comments {
+		min-height: 65rem; /* Adjust the height as needed */
 	}
 
-	.carousel-item,
-	.carousel-item.active {
-	  /* Assurez-vous que les éléments de carrousel sont affichés en bloc et occupent la largeur complète */
-	  display: block;
-	  width: 100%;
-	}
+    .carousel-container {
+        flex-direction: column;
+        align-items: center; /* Centers items for better presentation */
+    }
 
-	.carousel-item .comment {
-	  /* Chaque commentaire prend la largeur complète du conteneur et ajoute de la marge en bas pour l'espacement */
-	  width: 100%;
-	  margin: 0 0 1rem 0; /* Ajustez selon vos besoins */
-	  height: auto; /* La hauteur s'ajuste en fonction du contenu du commentaire */
-	}
+    .carousel-item,
+    .carousel-item.active {
+        display: none; /* Hide all carousel items by default */
+        width: 100%;
+    }
 
-	/* Assurez-vous qu'il n'y a pas de marge supplémentaire au-dessus du premier commentaire */
-	.carousel-item .comment:first-child {
-	  margin-top: 0;
-	}
+    .carousel-item.active {
+        display: block; /* Only display the active carousel item */
+    }
+
+    .comment {
+        width: 100%; /* Full width of the container */
+        margin: 0 0 1rem 0; /* Adjust based on your needs */
+        height: auto; /* Adjust height based on content */
+		min-height: 12rem;
+    }
+
+    .comment:first-child {
+        margin-top: 0;
+    }
 }
 
 /* --------------Footer Styles-------------- */
