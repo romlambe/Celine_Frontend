@@ -1,8 +1,12 @@
 # Celine_Frontend
 
-js pour api google
 langue dans le header (fr/en)
-carte en responsive
+bon texte
+landing note + js pour api google
+finir commentaire (chosir commentaire sur google)
+Carte section
+
+service en responsive
 pop up carte et condition dutilisation
 
 html :
