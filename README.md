@@ -1,6 +1,6 @@
 # Celine_Frontend
 
-langue dans le header (fr/en)
+langue dans le header (fr/en) / ajout changement de langue
 bon texte
 landing note + js pour api google
 finir commentaire (chosir commentaire sur google)
