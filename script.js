@@ -1,16 +1,14 @@
 // Langage option
 document.addEventListener('DOMContentLoaded', function() {
-    // Set initial language from localStorage or default to 'fr'
-    let currentLang = localStorage.getItem('currentLang') || 'fr';
+    // Detect browser language
+    let browserLang = navigator.language || navigator.userLanguage;
+    browserLang = browserLang.includes('fr') ? 'fr' : 'en';
+
+    // Set initial language from localStorage or browser language or default to 'fr'
+    let currentLang = localStorage.getItem('currentLang') || browserLang;
 
     // Language text content mapping
     const langTexts = {
-        'fr': {
-            'prestation': 'Prestation',
-            'le-lieu': 'Le Lieu',
-            'contact': 'Contactez-moi',
-            'flag': 'image/header/french_flag.png' // Path to the French flag image
-        },
         'en': {
             'prestation': 'Service',
             'le-lieu': 'Location',
@@ -19,23 +17,36 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Update the UI with the current language
-    function updateLanguage(lang) {
-        // Update text for each link
-        document.querySelectorAll('.navigation a').forEach(link => {
-            const textKey = link.getAttribute('href').replace('#', '');
-            link.textContent = langTexts[lang][textKey];
-        });
-
-        // Update the flag image
-        const flagImage = document.querySelector('.language-flag');
-        flagImage.src = langTexts[lang]['flag'];
-
-        // Save the current language to localStorage
+    // Function to save the current language to localStorage
+    function saveLanguage(lang) {
         localStorage.setItem('currentLang', lang);
     }
 
-    // Initialize the UI with the saved or default language
+    // Update the UI with the current language
+    function updateLanguage(lang) {
+        // Update text for each link only if the language is English
+        if (lang === 'en') {
+            document.querySelectorAll('.navigation a').forEach(link => {
+                const textKey = link.getAttribute('href').replace('#', '');
+                link.textContent = langTexts[lang][textKey];
+            });
+        } else {
+            // If the language is French, use the text already in the HTML
+            document.querySelectorAll('.navigation a').forEach(link => {
+                const textKey = link.getAttribute('href').replace('#', '');
+                link.textContent = link.dataset.fr; // Assuming you have data-fr attributes for each link
+            });
+        }
+
+        // Update the flag image
+        const flagImage = document.querySelector('.language-flag');
+        flagImage.src = lang === 'en' ? langTexts[lang]['flag'] : 'image/header/french_flag.png';
+
+        // Save the current language
+        saveLanguage(lang);
+    }
+
+    // Initialize the UI with the saved or browser language or default language
     updateLanguage(currentLang);
 
     // Add event listener to the flag for switching language
@@ -45,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateLanguage(currentLang);
     });
 });
+
 
 //Menu
 document.addEventListener('DOMContentLoaded', function() {

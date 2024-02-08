@@ -11,6 +11,8 @@ pop up carte et condition dutilisation
 
 logo + nom site dans longlet
 
+data-fr pour les texte qui change de langue
+
 html :
 faire les alt
 optimise ceo
