@@ -1,6 +1,5 @@
 # Celine_Frontend
 
-landing note + js pour api google
 finir commentaire (chosir commentaire sur google)
 Carte section
 
@@ -16,3 +15,6 @@ toute les meta donnee
 verif nav est reconue logiciel pour aveugle
 faire les alt (img description)
 optimise ceo
+
+memo:
+pas de systeme auto pour nombre de commentaire et note
