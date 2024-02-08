@@ -9,6 +9,8 @@ Carte section
 service en responsive
 pop up carte et condition dutilisation
 
+logo + nom site dans longlet
+
 html :
 faire les alt
 optimise ceo
