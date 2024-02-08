@@ -18,3 +18,9 @@ optimise ceo
 
 memo:
 pas de systeme auto pour nombre de commentaire et note
+
+POUR GIT
+faire readme
+premier projet freelance
+code pas tres bon mais bonne premiere xp
+apprentissage hebergement + seo pour un client
