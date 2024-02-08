@@ -162,7 +162,7 @@ html {
     }
 
 	#language-toggle {
-        display: block; /* Use block to maintain the flow */
+        display: none; /* Use block to maintain the flow */
         padding: 0rem; /* Add padding to increase the size of the clickable area */
         margin-left: 3rem; /* Move the flag more to the left */
         margin-right: auto; /* Ensure the rest of the space is on the right */

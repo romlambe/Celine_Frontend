@@ -14,5 +14,6 @@ logo + nom site dans longlet
 data-fr pour les texte qui change de langue
 
 html :
-faire les alt
+verif nav est reconue logiciel pour aveugle
+faire les alt (img description)
 optimise ceo
