@@ -1,7 +1,5 @@
 # Celine_Frontend
 
-langue dans le header (fr/en) / ajout changement de langue
-bon texte
 landing note + js pour api google
 finir commentaire (chosir commentaire sur google)
 Carte section
@@ -11,9 +9,10 @@ pop up carte et condition dutilisation
 
 logo + nom site dans longlet
 
-data-fr pour les texte qui change de langue
+data-fr pour les texte qui change de langue / bon texte
 
 html :
+toute les meta donnee
 verif nav est reconue logiciel pour aveugle
 faire les alt (img description)
 optimise ceo

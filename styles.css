@@ -6,22 +6,22 @@
 }
 
 @font-face {
-	font-family: 'Times';
-	src: url('/font/NotoSerif.ttf') format('truetype');
-	font-weight: 400;
-	font-style: normal;
+  font-family: "Times";
+  src: url("/font/NotoSerif.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 body,
 html {
-  font-family: 'Times', serif;
+  font-family: "Times", serif;
   font-size: 16px;
   scroll-behavior: smooth;
 }
 
 /* --------------HEADER----------------- */
 .site-header {
-  background: #D3C09E; /* Light grey */
+  background: #d3c09e; /* Light grey */
   color: white;
   padding: 20px;
   position: sticky;
@@ -35,9 +35,9 @@ html {
 }
 
 .header-content {
-	display: flex; /* Use Flexbox */
-	align-items: center; /* Center items vertically */
-	justify-content: space-between; /* Distribute space between nav and button */
+  display: flex; /* Use Flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Distribute space between nav and button */
 }
 
 /* Site Title */
@@ -83,18 +83,18 @@ html {
 }
 
 #language-toggle {
-	background-color: #D3C09E; /* Set this to match your header's background color */
-	border: none;
-	cursor: pointer;
-	padding: 0;
-	margin-left: auto; /* Pushes the button to the far right if in a flex container */
+  background-color: #d3c09e; /* Set this to match your header's background color */
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto; /* Pushes the button to the far right if in a flex container */
 }
 
 .language-flag {
-	width: 30px;
-	height: auto;
-	cursor: pointer;
-	margin-right: 10px;
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 .site-header {
@@ -106,84 +106,84 @@ html {
 }
 
 .menu-icon {
-    display: none; /* Cache l'icône du menu par défaut */
+  display: none; /* Cache l'icône du menu par défaut */
 }
 
 @media screen and (max-width: 1160px) {
-    .site-header {
-        justify-content: space-around; /* Adjusts space distribution */
-    }
+  .site-header {
+    justify-content: space-around; /* Adjusts space distribution */
+  }
 
-    .site-title {
-        position: static; /* Resets the position */
-        transform: none; /* Removes the transform */
-        margin: 0 auto; /* Centers the title in the available space */
-    }
+  .site-title {
+    position: static; /* Resets the position */
+    transform: none; /* Removes the transform */
+    margin: 0 auto; /* Centers the title in the available space */
+  }
 
-    .navigation {
-        justify-content: center; /* Center the navigation items */
-    }
+  .navigation {
+    justify-content: center; /* Center the navigation items */
+  }
 }
 
 @media screen and (max-width: 850px) {
-    .menu-icon {
-        display: block; /* Display the menu icon */
-        position: relative; /* To position the dropdown menu with respect to menu-icon */
-    }
+  .menu-icon {
+    display: block; /* Display the menu icon */
+    position: relative; /* To position the dropdown menu with respect to menu-icon */
+  }
 
-    .navigation {
-        display: none; /* Hide by default */
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the start */
-        background-color: #D3C09E; /* Background color */
-        position: absolute; /* Absolute position for dropdown */
-        top: 100%; /* Position below the menu icon */
-        right: 0;
-        width: auto; /* Only as wide as its content */
-        min-width: 150px; /* Minimum width */
-        text-align: left; /* Align text to the left */
-    }
+  .navigation {
+    display: none; /* Hide by default */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    background-color: #d3c09e; /* Background color */
+    position: absolute; /* Absolute position for dropdown */
+    top: 100%; /* Position below the menu icon */
+    right: 0;
+    width: auto; /* Only as wide as its content */
+    min-width: 150px; /* Minimum width */
+    text-align: left; /* Align text to the left */
+  }
 
-    .navigation.active {
-        display: flex; /* Display the navigation when it is active */
-    }
+  .navigation.active {
+    display: flex; /* Display the navigation when it is active */
+  }
 
-    .navigation a,
-    #language-toggle {
-        padding: 10px 20px; /* Provide padding for each item */
-    }
+  .navigation a,
+  #language-toggle {
+    padding: 10px 20px; /* Provide padding for each item */
+  }
 
-    #language-toggle {
-        display: none; /* Initially, don't display the flag */
-    }
+  #language-toggle {
+    display: none; /* Initially, don't display the flag */
+  }
 
-    .navigation.active #language-toggle {
-        display: block; /* Display the flag when the menu is active */
-    }
+  .navigation.active #language-toggle {
+    display: block; /* Display the flag when the menu is active */
+  }
 
-	#language-toggle {
-        display: none; /* Use block to maintain the flow */
-        padding: 0rem; /* Add padding to increase the size of the clickable area */
-        margin-left: 3rem; /* Move the flag more to the left */
-        margin-right: auto; /* Ensure the rest of the space is on the right */
-    }
+  #language-toggle {
+    display: none; /* Use block to maintain the flow */
+    padding: 0rem; /* Add padding to increase the size of the clickable area */
+    margin-left: 3.7rem; /* Move the flag more to the left */
+    margin-right: auto; /* Ensure the rest of the space is on the right */
+  }
 
-    .language-flag {
-        width: 3rem; /* Increase the width of the flag */
-        height: auto; /* Maintain aspect ratio */
-    }
+  .language-flag {
+    width: 2.3rem; /* Increase the width of the flag */
+    height: auto; /* Maintain aspect ratio */
+  }
 }
 
 @media screen and (max-width: 570px) {
-    .site-title h4 {
-        font-size: 1.5rem; /* Réduit la taille de la police à 3rem */
-    }
+  .site-title h4 {
+    font-size: 1.5rem; /* Réduit la taille de la police à 3rem */
+  }
 }
 
 @media screen and (max-width: 450px) {
-    .site-title h4 {
-        font-size: 1rem; /* Réduit la taille de la police à 3rem */
-    }
+  .site-title h4 {
+    font-size: 1rem; /* Réduit la taille de la police à 3rem */
+  }
 }
 
 /* --------------MAIN SECTION----------------- */
@@ -203,10 +203,10 @@ section {
 .landing {
   display: grid;
   grid-template-columns: 10vw 40vw 30vw 20vw; /* Define the grid layout with two columns */
-  background: #F9F7F3; /* Light red */
+  background: #f9f7f3; /* Light red */
   min-height: 40rem;
   height: 45rem;
-  background-image: url('image/landing/background1.png');
+  background-image: url("image/landing/background1.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -214,20 +214,20 @@ section {
 
 /* Parent container of the image */
 .landing-child-40 {
-	grid-column: 2 / 3;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: visible;
-	z-index: 0;
-  }
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  z-index: 0;
+}
 
-  .landing-child-40 img {
-	max-width: 60%; /* Limit the image to the width of its parent */
-	max-height: 60%; /* Limit the image to the height of its parent */
-	height: 40rem; /* Maintain aspect ratio */
-	object-fit: cover; /* Adjust as needed */
-  }
+.landing-child-40 img {
+  max-width: 60%; /* Limit the image to the width of its parent */
+  max-height: 60%; /* Limit the image to the height of its parent */
+  height: 40rem; /* Maintain aspect ratio */
+  object-fit: cover; /* Adjust as needed */
+}
 
 .landing-child-30 {
   display: flex;
@@ -254,52 +254,79 @@ section {
   /* Additional styling for the centered text */
 }
 
+.review-invitation {
+	text-align: center;
+	margin: 0; /* No margin for the invitation text */
+	padding: 5px 0; /* Slight padding at top and bottom for spacing */
+  }
+
+  .star-rating {
+	height: 50px; /* Set the star image height */
+	margin: -50px 0 10px; /* Negative top margin to move up, bottom margin for space to Google review */
+  }
+
+  .google-review {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: -20px 0 10px;
+  }
+
+  .google-logo {
+	height: 25px; /* Set the Google logo image height */
+	margin-right: 5px; /* Space between logo and text */
+  }
+
 @media screen and (max-width: 1650px) {
-    .landing {
-        /* Adjust the grid layout to give more space to the text column */
-        grid-template-columns: 10vw 35vw 45vw 10vw;
-    }
+  .landing {
+    /* Adjust the grid layout to give more space to the text column */
+    grid-template-columns: 10vw 35vw 45vw 10vw;
+  }
 }
 
 @media screen and (max-width: 1100px) {
-    .landing {
-        /* Increase the height of the landing section */
-        height: 60rem; /* Adjust this value as needed */
-        min-height: 55rem; /* Optional: adjust the minimum height as needed */
-		grid-template-columns: 0vw 50vw 50vw 0vw;
-    }
+  .landing {
+    /* Increase the height of the landing section */
+    grid-template-columns: 0vw 50vw 50vw 0vw;
+  }
 }
 
 @media screen and (max-width: 1000px) {
-	.landing-child-30 h2 {
-		font-size: 3rem; /* Example font size in rem */
-	  }
+  .landing-child-30 h2 {
+    font-size: 3rem; /* Example font size in rem */
+  }
 }
 
+@media screen and (max-width: 750px) {
+	.landing {
+		height: 55rem; /* Adjust this value as needed */
+	}
+  }
+
 @media screen and (max-width: 650px) {
-    .landing {
-        grid-template-rows: auto auto; /* Create two row tracks */
-        grid-template-columns: 1fr; /* Set to one column */
-        height: 70rem; /* Adjust this value as needed */
-        min-height: 65rem; /* Optional: adjust the minimum height as needed */
-    }
+  .landing {
+    grid-template-rows: auto auto; /* Create two row tracks */
+    grid-template-columns: 1fr; /* Set to one column */
+    height: 80rem; /* Adjust this value as needed */
+    min-height: 75rem; /* Optional: adjust the minimum height as needed */
+  }
 
-    .landing-child-40 {
-        grid-column: 1; /* Place image in the first column */
-        grid-row: 1; /* Place image in the first row */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .landing-child-40 {
+    grid-column: 1; /* Place image in the first column */
+    grid-row: 1; /* Place image in the first row */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .landing-child-40 img {
-        display: block; /* Ensure the image is displayed */
-        max-width: 100%; /* Image can scale up to 100% of its parent */
-        max-height: 100%; /* Maintain aspect ratio without exceeding the parent's height */
-        width: auto; /* Adjust width automatically */
-        height: auto; /* Adjust height automatically */
-        object-fit: contain; /* Ensure the full image is visible */
-    }
+  .landing-child-40 img {
+    display: block; /* Ensure the image is displayed */
+    max-width: 100%; /* Image can scale up to 100% of its parent */
+    max-height: 100%; /* Maintain aspect ratio without exceeding the parent's height */
+    width: auto; /* Adjust width automatically */
+    height: auto; /* Adjust height automatically */
+    object-fit: contain; /* Ensure the full image is visible */
+  }
 }
 
 /* --------------Services Section-------------- */
@@ -347,7 +374,7 @@ section {
 .blank2,
 .blank3,
 .blank4 {
-  background-color: #F9F7F3;
+  background-color: #f9f7f3;
   height: 100%;
 }
 /*bottom blank */
@@ -355,7 +382,7 @@ section {
 .blank6,
 .blank7,
 .blank8 {
-  background-color: #F9F7F3;
+  background-color: #f9f7f3;
   height: 100%;
 }
 .blank1 {
@@ -391,7 +418,7 @@ section {
 .light6,
 .light7,
 .light8 {
-  background-color: #F2EDE2D9;
+  background-color: #f2ede2d9;
   height: 100%;
 }
 .light1 {
@@ -432,7 +459,7 @@ section {
 .bg-mainb,
 .bg-mainc,
 .bg-maind {
-  background-color: #ECE0D3;
+  background-color: #ece0d3;
   height: 100%;
 }
 .bg-main1 {
@@ -477,13 +504,13 @@ section {
 
 .cleft {
   grid-area: cleft;
-  background-color: #E4D5BB;
+  background-color: #e4d5bb;
   height: 100%;
 }
 
 .cright {
   grid-area: cright;
-  background-color: #A63D28;
+  background-color: #a63d28;
   height: 100%;
 }
 
@@ -491,13 +518,13 @@ section {
 .service-header {
   grid-area: head;
   font-size: 3rem;
-  background-color: #ECE0D3;
+  background-color: #ece0d3;
   height: 100%;
 }
 
 .service-main {
   grid-area: text;
-  background-color: #ECE0D3;
+  background-color: #ece0d3;
   height: 100%;
 }
 
@@ -505,77 +532,75 @@ section {
   grid-area: btton;
   display: flex; /* For centering content inside the button container */
   align-items: center; /* Center the button vertically */
-  background-color: #ECE0D3;
+  background-color: #ece0d3;
   height: 100%;
 }
 
 .button-link {
-	display: inline-block; /* Allows us to set padding and margins */
-	padding: 10px 20px; /* Adjust padding as needed */
-	border: 2px solid #000; /* Solid black border */
-	background-color: #ECE0D3;
-	color: #000; /* Text color */
-	text-align: center;
-	text-decoration: none; /* Removes underline from links */
-	font-size: 1rem; /* Adjust the font size as needed */
-	border-radius: 20px; /* Rounded corners */
-	cursor: pointer; /* Cursor to indicate button is clickable */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-	transition: all 0.3s ease; /* Smooth transition for hover effects */
-  }
+  display: inline-block; /* Allows us to set padding and margins */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: 2px solid #000; /* Solid black border */
+  background-color: #ece0d3;
+  color: #000; /* Text color */
+  text-align: center;
+  text-decoration: none; /* Removes underline from links */
+  font-size: 1rem; /* Adjust the font size as needed */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer; /* Cursor to indicate button is clickable */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
 
-  .button-link:hover {
-	background-color: #E4D5BB;; /* Slightly darker background on hover */
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
-  }
-
+.button-link:hover {
+  background-color: #e4d5bb; /* Slightly darker background on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
 
 /* Cards */
 
 /* Style général des cartes */
 .service-card {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	padding: 20px;
-	background-color: #ffffff;
-	border: 1px solid #e0e0e0;
-	/* border-radius: 1rem; */
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-	transition: transform 0.2s;
-	height: 105%;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  /* border-radius: 1rem; */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  height: 105%;
+}
 
-  .service-card:hover {
-	transform: scale(1.05);
-  }
+.service-card:hover {
+  transform: scale(1.05);
+}
 
-  /* Style des images dans les cartes */
-  .service-card img {
-	max-width: 100%;
-	height: auto;
-	margin-bottom: 10px;
-  }
+/* Style des images dans les cartes */
+.service-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
 
-  /* Style des titres des cartes */
-  .service-card h2 {
-	font-size: 1.5rem;
-	margin: 0;
-	color: #333;
-  }
+/* Style des titres des cartes */
+.service-card h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+}
 
-  /* Style des paragraphes de texte dans les cartes */
-  .service-card p {
-	font-size: 1rem;
-	color: #777;
-	margin: 0;
-  }
-
+/* Style des paragraphes de texte dans les cartes */
+.service-card p {
+  font-size: 1rem;
+  color: #777;
+  margin: 0;
+}
 
 .service-card1 {
   grid-area: card1;
-  background-color: #CE8669;
+  background-color: #ce8669;
 }
 
 .service-card2 {
@@ -611,8 +636,8 @@ section {
   max-height: 54em;
   position: relative; /* Contain the absolutely positioned .lieu-image */
   overflow: hidden; /* Prevents scrollbars if content overflows */
-  background-color: #F9F7F3;
-  background-image: url('image/lieu/background2.png');
+  background-color: #f9f7f3;
+  background-image: url("image/lieu/background2.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -625,7 +650,7 @@ section {
 }
 
 .lieu-content h2 {
-    font-size: 5rem; /* Adjust the font size as desired */
+  font-size: 5rem; /* Adjust the font size as desired */
 }
 
 .lieu-image {
@@ -643,7 +668,7 @@ section {
   position: relative; /* Use relative instead of absolute to stack on top of the color block */
   z-index: 2; /* Ensure the image is above the color block */
   max-height: 100%; /* Ensure it doesn't overflow the container */
-  width:75%;
+  width: 75%;
 }
 
 .color-block {
@@ -658,96 +683,96 @@ section {
 
 /* Responsive adjustments */
 @media (max-width: 1300px) {
-    .lieu-content {
-        margin-left: 5rem; /* Smaller margin for medium screens */
-        max-width: 50ch; /* Slightly narrower text line */
-    }
-    .lieu-content h2 {
-        font-size: 4rem; /* Smaller font size for medium screens */
-    }
-    .color-block {
-        width: 12rem; /* Thinner color block for medium screens */
-    }
+  .lieu-content {
+    margin-left: 5rem; /* Smaller margin for medium screens */
+    max-width: 50ch; /* Slightly narrower text line */
+  }
+  .lieu-content h2 {
+    font-size: 4rem; /* Smaller font size for medium screens */
+  }
+  .color-block {
+    width: 12rem; /* Thinner color block for medium screens */
+  }
 }
 
 @media (max-width: 900px) {
-    .lieu-content {
-        margin-left: 2rem; /* Even smaller margin for small screens */
-        max-width: 40ch; /* More narrow text line for small screens */
-    }
-    .lieu-content h2 {
-        font-size: 3rem; /* Even smaller font size for small screens */
-    }
-    .color-block {
-        width: 8rem; /* Even thinner for small screens */
-    }
+  .lieu-content {
+    margin-left: 2rem; /* Even smaller margin for small screens */
+    max-width: 40ch; /* More narrow text line for small screens */
+  }
+  .lieu-content h2 {
+    font-size: 3rem; /* Even smaller font size for small screens */
+  }
+  .color-block {
+    width: 8rem; /* Even thinner for small screens */
+  }
 }
 
 @media (max-width: 768px) {
-    .lieu-section {
-        flex-direction: column; /* Change to column layout */
-        align-items: center; /* Align items to the center */
-    }
-    .lieu-content {
-        width: 100%; /* Full width for content */
-        max-width: 100%; /* Allow content to fill its container */
-        margin-left: 0; /* Reset margin left */
-		margin-right: 4rem;
-        padding: 0 2rem; /* Add padding to both sides */
-        box-sizing: border-box; /* Include padding in the width calculation */
-    }
-    .lieu-content h2 {
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
-    }
-    .lieu-image {
-        width: 100%; /* Full width for the image container */
-        height: auto; /* Adjust height automatically */
-        order: -1; /* Place image above the content */
-        position: static; /* Reset position to flow in normal document order */
-        justify-content: flex-end; /* Center image horizontally */
-    }
-    .lieu-image img {
-        width: auto; /* Adjust width automatically */
-        max-height: 30vh; /* Smaller image height, 30% of the viewport height */
-        max-width: 80%; /* Smaller image width, 80% of the container width */
-        margin-top: 2rem; /* Increase space above the image */
-        margin-bottom: 1rem; /* Add some space below the image */
-    }
-    .color-block {
-        position: absolute; /* Keep it absolutely positioned */
-        width: 4rem; /* Keep the original thin width */
-        right: 0; /* Align to the right */
-        top: 5%; /* Distance from the top */
-        bottom: 5%; /* Distance from the bottom */
-        z-index: 1; /* Keep it below the image */
-    }
+  .lieu-section {
+    flex-direction: column; /* Change to column layout */
+    align-items: center; /* Align items to the center */
+  }
+  .lieu-content {
+    width: 100%; /* Full width for content */
+    max-width: 100%; /* Allow content to fill its container */
+    margin-left: 0; /* Reset margin left */
+    margin-right: 4rem;
+    padding: 0 2rem; /* Add padding to both sides */
+    box-sizing: border-box; /* Include padding in the width calculation */
+  }
+  .lieu-content h2 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+  .lieu-image {
+    width: 100%; /* Full width for the image container */
+    height: auto; /* Adjust height automatically */
+    order: -1; /* Place image above the content */
+    position: static; /* Reset position to flow in normal document order */
+    justify-content: flex-end; /* Center image horizontally */
+  }
+  .lieu-image img {
+    width: auto; /* Adjust width automatically */
+    max-height: 30vh; /* Smaller image height, 30% of the viewport height */
+    max-width: 80%; /* Smaller image width, 80% of the container width */
+    margin-top: 2rem; /* Increase space above the image */
+    margin-bottom: 1rem; /* Add some space below the image */
+  }
+  .color-block {
+    position: absolute; /* Keep it absolutely positioned */
+    width: 4rem; /* Keep the original thin width */
+    right: 0; /* Align to the right */
+    top: 5%; /* Distance from the top */
+    bottom: 5%; /* Distance from the bottom */
+    z-index: 1; /* Keep it below the image */
+  }
 }
 
 @media (max-width: 450px) {
-    .lieu-section {
-        min-height: 60rem; /* Augmenter la hauteur minimale */
-    }
-    .lieu-content {
-        padding-bottom: 2rem; /* Ajouter du padding en bas pour allonger la section */
-    }
-    .lieu-image img {
-        max-height: 25vh;
-		margin-top: 3rem;
-    }
-    /* Vous pouvez également vouloir ajuster d'autres propriétés ici si nécessaire */
+  .lieu-section {
+    min-height: 60rem; /* Augmenter la hauteur minimale */
+  }
+  .lieu-content {
+    padding-bottom: 2rem; /* Ajouter du padding en bas pour allonger la section */
+  }
+  .lieu-image img {
+    max-height: 25vh;
+    margin-top: 3rem;
+  }
+  /* Vous pouvez également vouloir ajuster d'autres propriétés ici si nécessaire */
 }
 
 @media (max-width: 375px) {
-    .lieu-section {
-        min-height: 70rem; /* Augmenter la hauteur minimale */
-    }
-    .lieu-content {
-        padding-bottom: 2rem; /* Ajouter du padding en bas pour allonger la section */
-    }
-    .lieu-image img {
-        max-height: 25vh; /* Ajuster si nécessaire pour la taille de l'image */
-    }
-    /* Vous pouvez également vouloir ajuster d'autres propriétés ici si nécessaire */
+  .lieu-section {
+    min-height: 70rem; /* Augmenter la hauteur minimale */
+  }
+  .lieu-content {
+    padding-bottom: 2rem; /* Ajouter du padding en bas pour allonger la section */
+  }
+  .lieu-image img {
+    max-height: 25vh; /* Ajuster si nécessaire pour la taille de l'image */
+  }
+  /* Vous pouvez également vouloir ajuster d'autres propriétés ici si nécessaire */
 }
 
 /* --------------Image Sections-------------- */
@@ -758,15 +783,15 @@ section {
   align-items: center; /* Vertically center the grid items */
   justify-items: center; /* Horizontally center the grid items */
   min-height: 22rem; /* Minimum height for the container */
-  background-color: #ECE0D3; /* Light orange background color */
+  background-color: #ece0d3; /* Light orange background color */
 }
 
 .image-section {
-	display: flex; /* Use flexbox for alignment */
-	justify-content: center; /* Center horizontally */
-	align-items: center; /* Center vertically */
-	width: 100%; /* Use full width of the grid column */
-  }
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%; /* Use full width of the grid column */
+}
 
 .image-section img {
   max-width: 65%; /* Set a max-width to make the images smaller */
@@ -795,43 +820,44 @@ section {
 
 /* --------------Carte Section-------------- */
 .carte {
-	background-color: #F9F7F3;
-	background-image: url('image/carte/background3.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center center;
-	position: relative;
+  background-color: #f9f7f3;
+  background-image: url("image/carte/background3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
 }
 
 .carte {
-    display: flex;
-    justify-content: center;
-    align-items: center;text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .carte-content {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-row-gap: 5rem;
-    grid-column-gap: 20rem;
-    align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-row-gap: 5rem;
+  grid-column-gap: 20rem;
+  align-items: center;
 }
 
 .small-img {
-    width: 100%;
-    height: auto;
-    grid-row: span 1;
+  width: 100%;
+  height: auto;
+  grid-row: span 1;
 }
 
 .text {
-    grid-row: span 1;
+  grid-row: span 1;
 }
 
 /* --------------Comments Section-------------- */
 .comments {
   display: grid;
   grid-template-rows: 1fr 3fr 1fr; /* Allocate space for title, carousel, and dots */
-  background: #ECE0D3; /* Light mint */
+  background: #ece0d3; /* Light mint */
   min-height: 37.5rem; /* Half of the viewport height */
   padding: 20px; /* Add some padding */
 }
@@ -860,7 +886,8 @@ section {
 }
 
 @keyframes slideIn {
-  from {text-align: center;
+  from {
+    text-align: center;
     transform: translateX(100%);
   }
   to {
@@ -890,7 +917,7 @@ section {
 }
 
 .comment {
-  background-color: #CE8669; /* The orange background color */
+  background-color: #ce8669; /* The orange background color */
   border-radius: 5px; /* Optional: adds rounded corners to the rectangle */
   padding: 20px; /* Space inside the rectangle */
   display: flex;
@@ -930,132 +957,132 @@ section {
   margin: 0 5px;
   display: inline-block;
   border-radius: 50%;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   cursor: pointer;
 }
 
 .dot.active,
 .dot:hover {
-  background-color: #CE8669;
+  background-color: #ce8669;
 }
 
 @media (min-width: 1251px) and (max-width: 1700px) {
-    .comment {
-        margin: 0 2rem; /* Reduced spacing between comments for medium screens */
-        /* Adjust the value as needed for your design */
-    }
+  .comment {
+    margin: 0 2rem; /* Reduced spacing between comments for medium screens */
+    /* Adjust the value as needed for your design */
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1250px) {
-    .comment {
-        margin: 0 1rem; /* Reduced spacing between comments for medium screens */
-        /* Adjust the value as needed for your design */
-    }
+  .comment {
+    margin: 0 1rem; /* Reduced spacing between comments for medium screens */
+    /* Adjust the value as needed for your design */
+  }
 }
 
 @media (max-width: 768px) {
-	.comments {
-		min-height: 65rem; /* Adjust the height as needed */
-	}
+  .comments {
+    min-height: 65rem; /* Adjust the height as needed */
+  }
 
-    .carousel-container {
-        flex-direction: column;
-        align-items: center; /* Centers items for better presentation */
-    }
+  .carousel-container {
+    flex-direction: column;
+    align-items: center; /* Centers items for better presentation */
+  }
 
-	.carousel-title {
-        margin-bottom: 6rem; /* Ensure there's a space between title and carousel */
-    }
+  .carousel-title {
+    margin-bottom: 6rem; /* Ensure there's a space between title and carousel */
+  }
 
-    .carousel-item,
-    .carousel-item.active {
-        display: none; /* Hide all carousel items by default */
-        width: 100%;
-    }
+  .carousel-item,
+  .carousel-item.active {
+    display: none; /* Hide all carousel items by default */
+    width: 100%;
+  }
 
-    .carousel-item.active {
-        display: block; /* Only display the active carousel item */
-    }
+  .carousel-item.active {
+    display: block; /* Only display the active carousel item */
+  }
 
-    .comment {
-        width: 100%; /* Full width of the container */
-        margin: 0 0 1rem 0; /* Adjust based on your needs */
-        height: auto; /* Adjust height based on content */
-		min-height: 15rem;
-    }
+  .comment {
+    width: 100%; /* Full width of the container */
+    margin: 0 0 1rem 0; /* Adjust based on your needs */
+    height: auto; /* Adjust height based on content */
+    min-height: 15rem;
+  }
 
-    .comment:first-child {
-        margin-top: 0;
-    }
+  .comment:first-child {
+    margin-top: 0;
+  }
 }
 
 /* --------------Footer Styles-------------- */
 .site-footer {
-	background: #E4D5BB; /* Dark grey */
-	color: rgb(0, 0, 0);
-	padding: 2rem;
-	display: flex;
-	align-items: flex-start;
-	height: 20rem;
+  background: #e4d5bb; /* Dark grey */
+  color: rgb(0, 0, 0);
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  height: 20rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-map img {
+  max-width: 20rem;
+  height: auto;
+}
+
+.footer-text-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-left: 2rem;
+}
+
+.footer-column {
+  margin: 0 1rem;
+}
+
+.footer-column h3 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1000px) {
+  .site-footer {
+    height: auto; /* Adjusts height to content */
+    padding-bottom: 2rem; /* Additional padding at the bottom, if needed */
   }
 
   .footer-container {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-map img {
-	max-width: 20rem;
-	height: auto;
+    width: 100%;
+    height: auto;
+    margin: auto; /* Centers the image horizontally */
   }
 
   .footer-text-columns {
-	display: flex;
-	justify-content: space-between;
-	flex-grow: 1;
-	margin-left: 2rem;
+    flex-direction: column;
+    margin-left: 0;
   }
 
   .footer-column {
-	margin: 0 1rem;
+    margin: 1rem 0; /* Adjust margin for vertical layout */
+    text-align: center;
   }
-
-  .footer-column h3 {
-	margin-bottom: 0.5rem;
-  }
-
-  .footer-column p {
-	margin-bottom: 0.5rem;
-	line-height: 1.5;
-  }
-
-  @media screen and (max-width: 1000px) {
-	.site-footer {
-        height: auto; /* Adjusts height to content */
-        padding-bottom: 2rem; /* Additional padding at the bottom, if needed */
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-	.footer-map img {
-		width: 100%;
-		height: auto;
-		margin: auto; /* Centers the image horizontally */
-	}
-
-    .footer-text-columns {
-        flex-direction: column;
-        margin-left: 0;
-    }
-
-    .footer-column {
-        margin: 1rem 0; /* Adjust margin for vertical layout */
-		text-align: center;
-    }
 }
 
 /* --------------Responsive Grid Layout for smaller screens-------------- */

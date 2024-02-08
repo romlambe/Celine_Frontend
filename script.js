@@ -98,6 +98,7 @@ window.addEventListener('resize', adjustImageForViewport);
 // Adjust the image when the script loads
 document.addEventListener('DOMContentLoaded', adjustImageForViewport);
 
+//carousel
 document.addEventListener("DOMContentLoaded", function() {
     let slideIndex = 1;
     showSlides(slideIndex); // Initialize the first slide
