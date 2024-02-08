@@ -33,9 +33,11 @@ html {
   height: 5rem; /* Set a specific height for the header */
   min-height: 3rem;
 }
-/* Assign to the grid area */
-.logo {
-  /* Logo stays aligned to the left */
+
+.header-content {
+	display: flex; /* Use Flexbox */
+	align-items: center; /* Center items vertically */
+	justify-content: space-between; /* Distribute space between nav and button */
 }
 
 /* Site Title */
@@ -80,6 +82,21 @@ html {
   padding: 8px 16px; /* Optional: add padding for better touch targets */
 }
 
+#language-toggle {
+	background-color: #D3C09E; /* Set this to match your header's background color */
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	margin-left: auto; /* Pushes the button to the far right if in a flex container */
+}
+
+.language-flag {
+	width: 30px;
+	height: auto;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
 .site-header {
   padding: 10px 20px;
 }
@@ -110,31 +127,38 @@ html {
 
 @media screen and (max-width: 850px) {
     .menu-icon {
-        display: block; /* Affiche l'icône du menu */
-        /* Autres styles de l'icône du menu */
+        display: block; /* Display the menu icon */
+        position: relative; /* To position the dropdown menu with respect to menu-icon */
     }
 
     .navigation {
-        display: none; /* Cache le menu par défaut */
-        flex-direction: column;
-        background-color: #D3C09E; /* Couleur de fond */
-        /* Autres styles pour le menu déroulant */
+        display: none; /* Hide by default */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        background-color: #D3C09E; /* Background color */
+        position: absolute; /* Absolute position for dropdown */
+        top: 100%; /* Position below the menu icon */
+        right: 0;
+        width: auto; /* Only as wide as its content */
+        min-width: 150px; /* Minimum width */
+        text-align: left; /* Align text to the left */
     }
 
     .navigation.active {
-        display: flex; /* Affiche le menu lorsqu'il est actif */
+        display: flex; /* Display the navigation when it is active */
     }
 
-    .menu-container {
-        position: relative; /* Positionnement relatif pour le conteneur */
+    .navigation a,
+    #language-toggle {
+        padding: 10px 20px; /* Provide padding for each item */
     }
 
-    .navigation {
-        position: absolute; /* Position absolue pour le menu déroulant */
-        top: 100%; /* Place le menu juste en dessous de l'icône du menu */
-        right: 0; /* Aligné à droite */
-        width: auto; /* Largeur ajustée au contenu */
-        /* Autres styles pour le positionnement et l'apparence */
+    #language-toggle {
+        display: none; /* Initially, don't display the flag */
+    }
+
+    .navigation.active #language-toggle {
+        display: block; /* Display the flag when the menu is active */
     }
 }
 
@@ -149,7 +173,6 @@ html {
         font-size: 1rem; /* Réduit la taille de la police à 3rem */
     }
 }
-
 
 /* --------------MAIN SECTION----------------- */
 section {

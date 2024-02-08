@@ -1,8 +1,76 @@
-document.querySelector('.menu-icon').addEventListener('click', function() {
-    var nav = document.querySelector('.navigation');
-    nav.classList.toggle('active');
+// Langage option
+document.addEventListener('DOMContentLoaded', function() {
+    // Set initial language from localStorage or default to 'fr'
+    let currentLang = localStorage.getItem('currentLang') || 'fr';
+
+    // Language text content mapping
+    const langTexts = {
+        'fr': {
+            'prestation': 'Prestation',
+            'le-lieu': 'Le Lieu',
+            'contact': 'Contactez-moi',
+            'flag': 'image/header/french_flag.png' // Path to the French flag image
+        },
+        'en': {
+            'prestation': 'Service',
+            'le-lieu': 'Location',
+            'contact': 'Contact Me',
+            'flag': 'image/header/english_flag.png' // Path to the English flag image
+        }
+    };
+
+    // Update the UI with the current language
+    function updateLanguage(lang) {
+        // Update text for each link
+        document.querySelectorAll('.navigation a').forEach(link => {
+            const textKey = link.getAttribute('href').replace('#', '');
+            link.textContent = langTexts[lang][textKey];
+        });
+
+        // Update the flag image
+        const flagImage = document.querySelector('.language-flag');
+        flagImage.src = langTexts[lang]['flag'];
+
+        // Save the current language to localStorage
+        localStorage.setItem('currentLang', lang);
+    }
+
+    // Initialize the UI with the saved or default language
+    updateLanguage(currentLang);
+
+    // Add event listener to the flag for switching language
+    document.querySelector('.language-flag').addEventListener('click', function() {
+        // Toggle between French and English
+        currentLang = (currentLang === 'fr') ? 'en' : 'fr';
+        updateLanguage(currentLang);
+    });
 });
 
+//Menu
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.querySelector('.menu-icon');
+    const nav = document.querySelector('.navigation');
+    const languageToggle = document.getElementById('language-toggle');
+
+    function moveLanguageToggle() {
+        if (window.innerWidth <= 850) {
+            if (!nav.contains(languageToggle)) {
+                nav.prepend(languageToggle); // Move the toggle into the nav
+            }
+        } else {
+            document.querySelector('.header-content').appendChild(languageToggle); // Move back to its original position on wider screens
+        }
+    }
+
+    menuIcon.addEventListener('click', function() {
+        nav.classList.toggle('active');
+        moveLanguageToggle();
+    });
+
+    window.addEventListener('resize', moveLanguageToggle);
+});
+
+// Landing page image adjustment
 function adjustImageForViewport() {
 	const imgElement = document.querySelector('.landing-child-40 img');
 	if (window.innerWidth <= 650) {
