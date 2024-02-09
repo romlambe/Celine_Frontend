@@ -918,13 +918,12 @@ section {
 
 .comment {
   background-color: #ce8669; /* The orange background color */
-  border-radius: 5px; /* Optional: adds rounded corners to the rectangle */
   padding: 20px; /* Space inside the rectangle */
   display: flex;
   flex-direction: column; /* Stack items vertically */
   justify-content: space-between; /* Space out title and paragraphs */
-  height: 30rem; /* Adjust height as needed */
-  margin: 0 5rem; /* Maintain spacing between comments */
+  height: 33rem; /* Adjust height as needed */
+  margin: 0 4rem; /* Maintain spacing between comments */
   color: white; /* Text color - change as needed */
   flex: 1; /* Each comment takes equal width */
 }
@@ -1083,22 +1082,4 @@ section {
     margin: 1rem 0; /* Adjust margin for vertical layout */
     text-align: center;
   }
-}
-
-/* --------------Responsive Grid Layout for smaller screens-------------- */
-@media (max-width: 768px) {
-  .image-sections {
-    grid-template-columns: repeat(1, 1fr);
-    font-size: 14px;
-  }
-
-  /* Adjust sections to auto height for smaller screens
-  .landing,
-  .services,
-  .lieu,
-  .carte,
-  .comments,
-  .site-footer {
-    min-height: auto;
-  }*/
 }
