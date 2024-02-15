@@ -13,7 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
             'prestation': 'Service',
             'le-lieu': 'Location',
             'contact': 'Contact Me',
-            'flag': 'image/header/english_flag.png' // Path to the English flag image
+            'flag': 'image/header/english_flag.png',
+			'title_landing': 'Who am I',
+			'paragraphe_1_landing': 'I discovered the benefits of massage when I lived in Moorea. Among the Polynesians massage is a daily practice and is one of the essential needs to ensure optimal well-being. After practicing the nursing profession for more than thirty years, I followed a one-year course of study in Toulouse to become a reflexotherapist and then a year of study at the holistic facial massage school of Montpellier for practice the profession of facialist.',
+			'paragraphe_2_landing': 'Today, in a setting with a Wabi-Sabi trend decoration, privileged and intimate, I offer you tailor-made and high-end services. I really appreciate the masseur-massée alchemy, seeing, listening with your hands and above all receiving, seeing you leave looking happy and satisfied!',
+			
         }
     };
 
